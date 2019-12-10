@@ -34,7 +34,7 @@ img {
     width: 100%;
  }
 
- .videoContainer .overlay {
+ .videoContainer .content {
      height: 100%;
      width: 100%;
      position: absolute;
@@ -82,7 +82,7 @@ span{
 
 .overlay-content {
     position: relative;
-    top: 25%;
+    top: 5%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
