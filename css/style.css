@@ -41,6 +41,7 @@ img {
      top: 0px;
      left: 0px;
      z-index: 2;
+     background-image: url("../img/.png");
      opacity: 1;
  }
 }
@@ -57,9 +58,12 @@ img {
 }
 
 #logo{
-    width:60%;
+    width:25%;
 }
 
+span{
+  color: white;
+}
 /* Nav overlay */
 
 .overlay {
@@ -135,12 +139,10 @@ img {
 
     #nav {
         padding: 0;
-        padding-left: 7%;
-        padding-right: 7%;
-        padding-top: 3%;
+        padding-left: 5%;
+        padding-right: 5%;
+
     }
 
-    #logo{
-        width: 80%;
-    }
+
 }
