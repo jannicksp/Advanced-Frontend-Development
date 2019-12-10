@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <title>fairbar - Aarhus</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Scripts -->
+    <script >
+        if (typeof jQuery == 'undefined')
+            document.write(unescape("%3Cscript src='js/jquery-1.9.js'" +
+                "type='text/javascript'%3E%3C/script%3E"))
+
+    </script>
+    <script src="js/trunk.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+    </script>
+    <!-- Scripts slut -->
+</head>
+
+<body>
+    <!-- Parallax Morten Bonderup bootstrap -->
+    <div class="container">
+
+        <!-- Forside -->
+        <div class="for parallax" id="forside">
+          <div class="puff-in-center">
+                <video  playsinline autoplay loop muted>
+                  <source  src="img/forside.mp4" type="video/mp4">
+                </video>
+              </div>
+            <!-- Header -->
+            <div id="nav">
+                <a href="index.html"><img id="logo" src="img/fairbarlogo.png" alt="logo"></a>
+
+
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <a id="logouden" href="index.html"> <img src="img/fairbarlogo.png" alt="logo"></a>
+                        <br>
+                        <a href="index.html">Home</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="events.html">Events</a>
+                        <a href="take-a-look.html">take a look</a>
+                          <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <!-- Overlay -->
+                <span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776; </span>
+            </div>
+            <!-- Header slut-->
+
+
+</body>
+
+</html>
