@@ -44,6 +44,15 @@ img {
      background-image: url("../img/.png");
      opacity: 1;
  }
+.introtext{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25%;
+
+}
+.introtext h1{
+  font-size: 50px;
 }
 
 /* Parallax container */
