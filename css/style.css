@@ -130,8 +130,15 @@ span{
 
 /* Eventpage */
 
-
-
+.brodtekst{
+font-weight: 400;
+margin-top: 70px;
+margin-right: 50%;
+margin-left: 5%;
+line-height: 40px;
+font-size: 20px;
+letter-spacing: 0.4px;
+}
 
 /* Media queries */
 
