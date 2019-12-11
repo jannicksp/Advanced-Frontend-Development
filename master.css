@@ -4,7 +4,7 @@ html, body {
      height: 100%;
 }
 
-h1 {
+.welcome-text {
      position: absolute;
      top: 50%;
      left: 50%;
@@ -14,7 +14,7 @@ h1 {
      color: #fff;
      text-align: center;
      font-weight: 600;
-     font-size: 16px;
+     font-size: 46px;
      letter-spacing: 30px;
 }
 .test{
@@ -124,3 +124,12 @@ span{
 
 
 }
+.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; top: 650px }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left;}
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+    .MultiCarousel .leftLst { left:0; }
+    .MultiCarousel .rightLst { right:0; }
+    
+        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
