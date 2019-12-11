@@ -22,13 +22,15 @@ function appendPersons(persons) {
   let htmlTemplate = "";
   for (let person of persons) {
     htmlTemplate += `
-        <article>
-          <h4>${person['gsx$pris']['$t']}</h4>
+        <article class="center">
           <h4>${person['gsx$nr']['$t']}</h4>
           <h4>${person['gsx$bryggeri']['$t']}</h4>
           <h4>${person['gsx$ølnavn']['$t']}</h4>
           <h4>${person['gsx$ølkat']['$t']}</h4>
+          <h4>${person['gsx$pris']['$t']}</h4>
           <h4>${person['gsx$alk']['$t']}</h4>
+            <h4>${person['gsx$beskrivelse']['$t']}</h4>
+              <br></br>
         </article>
       `;
   }
