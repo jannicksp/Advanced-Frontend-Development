@@ -130,15 +130,27 @@ span{
 
 /* Eventpage */
 
+.eventcontainer{
+  display: flex;
+  justify-content: flex-start;
+}
+
 .brodtekst{
 font-weight: 400;
 margin-top: 70px;
-margin-right: 50%;
+margin-right:10%;
 margin-left: 5%;
 line-height: 40px;
 font-size: 20px;
 letter-spacing: 0.4px;
 }
+
+.event{
+  margin-top: 70px;
+  margin-right: 5%;
+  margin-bottom: 15%;
+}
+
 
 /* Media queries */
 
