@@ -1,5 +1,6 @@
 "use strict";
 
+// fetch sheet menu 1 Jannick
 let sheetId = "1cnnMCXs8Tv9jrciZiQg4lwVNjVCEueYKdZ5JDFzTbxU";
 let sheetNumber = 1;
 let sheetUrl = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber}/public/full?alt=json`;
@@ -11,25 +12,25 @@ fetch(sheetUrl)
   })
   .then(function(json) {
     console.log(json);
-    appendPersons(json.feed.entry);
+    appendMenus(json.feed.entry);
   });
 
 /*
 Appends json data to the DOM
 */
-function appendPersons(persons) {
-  console.log(persons);
+function appendMenus(menus) {
+  console.log(menus);
   let htmlTemplate = "";
-  for (let person of persons) {
+  for (let menu of menus) {
     htmlTemplate += `
         <article class="center">
-          <h2>${person['gsx$nr']['$t']}</h2>
-          <h3>${person['gsx$bryggeri']['$t']}</h3>
-          <h4>${person['gsx$ølnavn']['$t']}</h4>
-          <h4>${person['gsx$ølkat']['$t']}</h4>
-          <h4>${person['gsx$pris']['$t']}</h4>
-          <h4>${person['gsx$alk']['$t']}</h4>
-            <p>${person['gsx$beskrivelse']['$t']}</p>
+          <h2>${menu['gsx$nr']['$t']}.</h2>
+          <h3>${menu['gsx$bryggeri']['$t']}&nbsp &nbsp</h3>
+          <h4>${menu['gsx$ølnavn']['$t']}</h4>
+          <h4>${menu['gsx$ølkat']['$t']}</h4>
+          <h4>${menu['gsx$alk']['$t']}</h4>
+            <p>${menu['gsx$beskrivelse']['$t']}  </p>
+                <h3>${menu['gsx$pris']['$t']}Kr</h3>
               <br></br>
                 <br></br>
         </article>
