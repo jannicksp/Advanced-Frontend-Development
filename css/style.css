@@ -17,12 +17,6 @@ img {
     cursor: pointer;
 }
 
-.center{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .videoContainer {
      position: relative;
      width: 100%;
@@ -154,21 +148,8 @@ letter-spacing: 0.4px;
 .event{
   margin-top: 70px;
   margin-right: 5%;
-  margin-bottom: 15%;
+  margin-bottom: 20%;
 }
-
-/* About Page */
-
-.left-ele, .right-ele {
-  text-align: center;
-  height: 100%;
-}
-
-.abouts {
-    background: #f1f1f4;
-    margin-bottom: 40px;
-}
-
 
 
 /* Media queries */
@@ -189,29 +170,8 @@ letter-spacing: 0.4px;
 }
 
 
-@media screen and (min-width: 768px) {
-/* About Page */
-.abouts img {
-width: 100%;
-height: 450px;
-object-fit: cover;
-object-position: center;
-}
+@media screen and (min-width: 850px) {
 
-.left-ele .container2 {
-float: right;
-}
-.abouts .left-ele {
-    width: 65%;
-    float: left;
-    text-align: right;
-}
-.abouts .right-ele {
-    width: 35%;
-    float: right;
-    text-align: left;
-}
-/* Nav Bar */
     #nav {
         padding: 0;
         padding-left: 5%;
