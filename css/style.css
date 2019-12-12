@@ -28,6 +28,17 @@ img {
   align-items: center;
   justify-content: space-around;
 }
+.contact a {
+  font-size: 30px;
+  color: black
+
+}
+
+.contact h3 {
+  font-size: 40px;
+  color: black
+
+}
 
 .videoContainer {
      position: relative;
