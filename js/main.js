@@ -35,5 +35,5 @@ function appendPersons(persons) {
         </article>
       `;
   }
-  document.querySelector("#persons").innerHTML += htmlTemplate;
+  document.querySelector("#menus").innerHTML += htmlTemplate;
 }
