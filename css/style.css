@@ -106,7 +106,7 @@ span{
     z-index: 1;
     top: 0;
     left: 0;
-    background-image: url(../img/overlay.jpg);
+    background-image: url(../img/overlay.png);
     background-repeat: repeat;
     opacity: 0.95;
     overflow-x: hidden;
