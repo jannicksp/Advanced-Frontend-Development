@@ -17,6 +17,30 @@ img {
     cursor: pointer;
 }
 
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centerMoreItems{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 5%;
+}
+.contact a {
+  font-size: 30px;
+  color: black
+
+}
+
+.contact h3 {
+  font-size: 40px;
+  color: black
+
+}
+
 .videoContainer {
      position: relative;
      width: 100%;
@@ -82,7 +106,7 @@ span{
     z-index: 1;
     top: 0;
     left: 0;
-    background-image: url(../img/overlay.png);
+    background-image: url(../img/overlay.jpg);
     background-repeat: repeat;
     opacity: 0.95;
     overflow-x: hidden;
@@ -150,6 +174,32 @@ letter-spacing: 0.4px;
   margin-right: 5%;
   margin-bottom: 20%;
 }
+
+/* About Page */
+
+.left-ele, .right-ele {
+  text-align: center;
+  height: 100%;
+}
+
+.abouts {
+    background: #f1f1f4;
+    margin-bottom: 40px;
+}
+
+/* Footer jannick*/
+footer {
+    background-color: #192d34;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer img {
+    padding: 15%;
+    width:80%;
+}
+
 
 
 /* Media queries */
