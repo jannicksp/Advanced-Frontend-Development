@@ -186,6 +186,19 @@ letter-spacing: 0.4px;
     margin-bottom: 40px;
 }
 
+/* Footer jannick*/
+footer {
+    background-color: #192d34;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer img {
+    padding: 15%;
+    width:80%;
+}
+
 
 
 /* Media queries */
