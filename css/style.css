@@ -23,6 +23,27 @@ img {
   justify-content: center;
 }
 
+.centerMoreItems{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 5%;
+}
+
+
+.contact a {
+  font-size: 20px;
+  color: black;
+  text-shadow:  1px 1px 5px #000
+
+}
+
+.contact h3 {
+  font-size: 25px;
+  color: black
+
+}
+
 .videoContainer {
      position: relative;
      width: 100%;
@@ -154,7 +175,7 @@ letter-spacing: 0.4px;
 .event{
   margin-top: 70px;
   margin-right: 5%;
-  margin-bottom: 15%;
+  margin-bottom: 20%;
 }
 
 /* About Page */
@@ -178,6 +199,19 @@ object-position: center;
   flex-direction: row;
   background-color: lightgrey;
   margin-bottom: 3%;
+/* Footer jannick*/
+footer {
+    background-color: #192d34;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer img {
+    padding: 15%;
+    width:80%;
+}
+
 
 }
 .aboutcontent2 {
@@ -223,8 +257,6 @@ text-align: right;
     }
 }
 
-
-
 @media screen and (min-width: 768px) {
 /* About Page */
 /*
@@ -236,8 +268,7 @@ object-position: center;
 
 }
 */
-/* Nav Bar */
-    #nav {
+/* Nav Bar */    #nav {
         padding: 0;
         padding-left: 5%;
         padding-right: 5%;
