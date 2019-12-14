@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <h2>${current.weather_descriptions}</h2>
         <img src='${current.weather_icons}'>
         <p>${current.temperature} &#8451</p>
-        <p>Feels like: ${current.feelslike} &#8451</p>
+        <p>Føles som: ${current.feelslike} &#8451</p>
       `;
     });
 });
