@@ -199,8 +199,10 @@ object-position: center;
   flex-direction: row;
   background-color: lightgrey;
   margin-bottom: 3%;
+}
 /* Footer jannick*/
-footer {
+
+footer{
     background-color: #192d34;
     display: flex;
     justify-content: space-around;
