@@ -17,6 +17,30 @@ img {
     cursor: pointer;
 }
 
+ /* Preloader - Ian */
+ /*
+.preloader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999;
+  overflow: hidden;
+  background: white;
+  text-align: center;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.4s, opacity 0.4s linear;
+}
+*/
+
+
+
+
 .center{
   display: flex;
   align-items: center;
@@ -192,37 +216,25 @@ width: 100%;
 height: 400px;
 object-fit: cover;
 object-position: center;
-
+vertical-align: middle;
 }
 .aboutcontent {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: lightgrey;
   margin-bottom: 3%;
-/* Footer jannick*/
-footer {
-    background-color: #192d34;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-footer img {
-    padding: 15%;
-    width:80%;
-}
-
-
 }
 .aboutcontent2 {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   background-color: lightgrey;
 }
 .textholder {
 width: 70%;
 color: white;
 margin: 2%;
+display: inline-block;
+
 }
 .textholder h1 {
 font-size: 200%;
@@ -245,6 +257,19 @@ line-height: 160%;
 text-align: right;
 }
 
+/* Footer jannick*/
+footer {
+    background-color: #192d34;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer img {
+    padding: 15%;
+    width:80%;
+}
+
 @media screen and (max-height: 450px) {
     .overlay a {
         font-size: 20px
@@ -258,16 +283,16 @@ text-align: right;
 }
 
 @media screen and (min-width: 768px) {
-/* About Page */
-/*
-.abouts img {
-width: 100%;
-height: 300px;
-object-fit: cover;
-object-position: center;
-
-}
-*/
+  .aboutss img {
+  height: 400px;
+  }
+  .aboutcontent {
+  
+    flex-direction: row;
+  }
+  .aboutcontent2 {
+    flex-direction: row-reverse;
+  }
 /* Nav Bar */    #nav {
         padding: 0;
         padding-left: 5%;

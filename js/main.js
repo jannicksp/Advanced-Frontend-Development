@@ -38,3 +38,18 @@ function appendMenus(menus) {
   }
   document.querySelector("#menus").innerHTML += htmlTemplate;
 }
+
+/* Preloader - Ian */
+
+function showLoader(show) {
+  let loader = document.querySelector('.preloader');
+  if (show) {
+    loader.classList.remove("hide");
+  } else {
+    loader.classList.add("hide");
+  }
+}
+
+setTimeout(function() {
+    showLoader(false);
+  }, 500);
