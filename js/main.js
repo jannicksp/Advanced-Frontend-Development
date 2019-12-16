@@ -263,3 +263,33 @@ window.addEventListener('load', function(){
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
+
+//dato og tid - Burhan
+
+//jeg har gjort så tal under 10 skal tilføje et 0, hvis i er mindre end 10 så tilføjes der et 0.
+function addZero(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
+//addZero er den function som tilføjer 0, når tallet er 1 cifret.
+
+function myFunction() {
+var d = new Date();
+var n = JSON.stringify(d.getFullYear());
+var k = addZero(d.getDate());
+var b = addZero(d.getMonth()+1);
+var t = addZero(d.getHours());
+var m = addZero(d.getMinutes());
+
+//jeg kalder på de variabler der skal vises. 
+
+document.getElementById("demo").innerHTML = k +  "/" +  b + " " + t + ":" + m + "-" + n;
+}
+
+//her kalder vi på functionerne så de aktiveres.
+
+myFunction();
+checkTime(m);
