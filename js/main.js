@@ -120,14 +120,15 @@ window.addEventListener('load', function(){
     document.querySelector("#artists").innerHTML += htmlTemplate;
   }
 
-  //Get the button:(Burhan)
-  mybutton = document.getElementById("myBtn");
+  //Get the button:(go to top page Burhan)
+  let mybutton = document.getElementById("gototop");
 
   // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = function() {scrollFunction()};
 
   function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    console.log(document.body.scrollTop)
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
       mybutton.style.display = "block";
     } else {
       mybutton.style.display = "none";
