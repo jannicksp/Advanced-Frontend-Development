@@ -79,3 +79,35 @@ function showLoader(show) {
 setTimeout(function() {
     showLoader(false);
   }, 500);
+
+  /* Fetches the Google Sheet for the About site - Ian */
+  let sheetId2 = "1tfF52Tp168bAyXVnjhIs_aKMJ-cAcFmM_ivLxAQ2vIU";
+  let sheetNumber2 = 1;
+  let sheetUrl2 = `https://spreadsheets.google.com/feeds/list/${sheetId2}/${sheetNumber2}/public/full?alt=json`;
+  console.log(sheetUrl2);
+
+  fetch(sheetUrl2)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json);
+      appendArtists(json.feed.entry);
+    });
+
+  /* This appends the data from the json file, to the DOM - Ian */
+  function appendArtists(artists) {
+    console.log(artists);
+    let htmlTemplate = "";
+    for (let artist of artists) {
+      htmlTemplate += `
+          <article class="center">
+            <h2>${artist['gsx$kunstnere']['$t']}</h2>
+            <h5>&nbsp-&nbsp${artist['gsx$kunstform']['$t']}</h5>
+          </article>
+        `;
+    }
+    document.querySelector("#artists").innerHTML += htmlTemplate;
+  }
+
+  
