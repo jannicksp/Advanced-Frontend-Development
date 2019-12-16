@@ -1,1 +1,0 @@
-mycallback({"$id":"1","currentDateTime":"2019-12-16T08:53+01:00","utcOffset":"01:00:00","isDayLightSavingsTime":false,"dayOfTheWeek":"Monday","timeZoneName":"Central Europe Standard Time","currentFileTime":132209600311432110,"ordinalDate":"2019-350","serviceResponse":null});
