@@ -2,30 +2,28 @@
 <html lang="da">
 
 <head>
-    <meta charset="UTF-8">
-    <title>fairbar - Aarhus</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>fairbar - Aarhus</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
-    <!-- Scripts -->
-    <script >
-        if (typeof jQuery == 'undefined')
-            document.write(unescape("%3Cscript src='js/jquery-1.9.js'" +
-                "type='text/javascript'%3E%3C/script%3E"))
+  <!-- Scripts -->
+  <script>
+    if (typeof jQuery == 'undefined')
+      document.write(unescape("%3Cscript src='js/jquery-1.9.js'" +
+        "type='text/javascript'%3E%3C/script%3E"))
+  </script>
+  <script src="js/trunk.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
 
-    </script>
-    <script src="js/trunk.js"></script>
-    <script>
-        function openNav() {
-            document.getElementById("myNav").style.width = "100%";
-        }
-
-        function closeNav() {
-            document.getElementById("myNav").style.width = "0%";
-        }
-
-    </script>
-    <!-- Scripts slut -->
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
+  <!-- Scripts slut -->
 </head>
 
 <body>
@@ -41,36 +39,36 @@
 
           <div id="slide-in-bck-center" class="intro-text">
 
-              <div id="page_wrap">
+            <div id="page_wrap">
 
             </div>
 
             <div id="nav">
-                <a href="index.html"><img id="logo" src="img/fairbarlogo.png" alt="logo"></a>
+              <a href="index.html"><img id="logo" src="img/fairbarlogo.png" alt="logo"></a>
 
 
-                <div id="myNav" class="overlay">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <div class="overlay-content">
-                        <a id="logouden" href="index.html"> <img src="img/fairbarlogo.png" alt="logo"></a>
-                        <br>
-                        <a href="index.html">Home</a>
-                        <a href="menu.html">Menu</a>
-                        <a href="events.html">Events</a>
-                        <a href="take-a-look.html">Take a look</a>
-                          <a href="about.html">About</a>
-                        <a href="contact.html">Contact</a>
-                    </div>
-
+              <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                  <a id="logouden" href="index.html"> <img src="img/fairbarlogo.png" alt="logo"></a>
+                  <br>
+                  <a href="index.html">Home</a>
+                  <a href="menu.html">Menu</a>
+                  <a href="events.html">Events</a>
+                  <a href="take-a-look.html">Take a look</a>
+                  <a href="about.html">About</a>
+                  <a href="contact.html">Contact</a>
                 </div>
-                <!-- Overlay -->
-                <span style="font-size:75px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+              </div>
+              <!-- Overlay -->
+              <span style="font-size:75px;cursor:pointer" onclick="openNav()">&#9776; </span>
             </div>
             <br> </br>
 
           </div>
           <div class="introtext">
-          <h1> Velkommen til Fairbar </h1>
+            <h1> Velkommen til Fairbar </h1>
 
           </div>
         </div>
@@ -79,58 +77,64 @@
 
 
 
-<div class="puff-in-center">
-      <video  playsinline autoplay loop muted>
-        <source  src="img/forside.mp4" type="video/mp4">
-      </video>
-    </div>
+      <div class="puff-in-center">
+        <video playsinline autoplay loop muted>
+          <source src="img/forside.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
 
   </header>
-<br>
-<div>
-  <div class="center" </div>
-  <img  src="img/beer.jpg" alt="beer">
-</div>
-  <h1 class="center">Øl menu </h1>
-  <section id="menus" class="grid-container"></section>
-</div>
-<br><br><br>
-<div>
-<h1 class="center"> Drikke Menu</h1>
-<br>
-<div class="center">
-<h1 class="center">Drikke Menu </h1>
-<section id="drinkmenus" class="grid-container"></section>
+  <br>
+  <div>
+    <div class="center" </div> <img src="img/beer.jpg" alt="beer">
+    </div>
 
-<h1 class="center">Sjus Menu </h1>
-<section id="sjusmenus" class="grid-container"></section>
-</div>
-</div>
-<br><br><br>
 
-<div>
-<h1 class="center"> Snacks og pakker</h1>
-<br>
-<div class="center">
-<h1 class="center">Snacks</h1>
-<section id="snackmenus" class="grid-container"></section>
 
-<h1 class="center">menuer </h1>
-<section id="menumenus" class="grid-container"></section>
-</div>
-</div>
+    <div>
+    <h1 class="center">Øl menu </h1>
+    <section id="menus" class="grid-container"></section>
+  </div>
+  <br><br><br>
+  <div>
 
-<button onclick="topFunction()" id="gototop" title="Go to top">Gå til toppen</button>
 
-<!-- main js file -->
-<script src="js/main.js"></script>
-<!-- Footer Jannick -->
-<footer>
+    <div>
+    <h1 class="center"> Drikke Menu</h1>
+    <br>
+    <div class="center">
+
+      <section id="drinkmenus" class="grid-container"></section>
+
+
+      <section id="sjusmenus" class="grid-container"></section>
+    </div>
+  </div>
+  <br><br><br>
+
+  <div>
+    <h1 class="center"> Snacks og pakker</h1>
+    <br>
+    <div class="center">
+
+      <section id="snackmenus" class="grid-container"></section>
+
+
+      <section id="menumenus" class="grid-container"></section>
+    </div>
+  </div>
+
+  <button onclick="topFunction()" id="gototop" title="Go to top">Gå til toppen</button>
+
+  <!-- main js file -->
+  <script src="js/main.js"></script>
+  <!-- Footer Jannick -->
+  <footer>
     <a href="https://www.facebook.com/fairbar/"><img src="img/facebook-logo.png" alt="facebook-logo"></a>
     <a href=" https://www.instagram.com/fairbar_aarhus/?hl=da"><img src="img/instagram-logo.png" alt="instagram-logo"></a>
     <a href="mailto:info@fairbar.dk"><img src="img/envelope.png" alt="maillogo-logo"></a>
-</footer>
+  </footer>
 </body>
 
 </html>
