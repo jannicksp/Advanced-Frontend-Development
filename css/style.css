@@ -17,6 +17,30 @@ img {
     cursor: pointer;
 }
 
+ /* Preloader - Ian */
+ /*
+.preloader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999;
+  overflow: hidden;
+  background: white;
+  text-align: center;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.4s, opacity 0.4s linear;
+}
+*/
+
+
+
+
 .center{
   display: flex;
   align-items: center;
@@ -181,6 +205,7 @@ letter-spacing: 0.4px;
 .aboutover {
 text-align: center;
 font-weight: bold;
+padding: 1.5%;
 
 }
 .aboutss {
@@ -191,17 +216,94 @@ width: 100%;
 height: 400px;
 object-fit: cover;
 object-position: center;
-
+vertical-align: middle;
 }
+
 .aboutcontent {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: lightgrey;
   margin-bottom: 3%;
 }
-/* Footer jannick*/
 
-footer{
+.aboutcontent2 {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgrey;
+}
+.textholder {
+width: 70%;
+color: white;
+margin: 2%;
+display: inline-block;
+margin-top: 5%;
+margin-bottom: 5%;
+
+}
+.textholder h1 {
+font-size: 200%;
+color: #192d34;
+
+}
+.textholder p {
+font-size: 150%;
+color: #3a7e89;
+font-family: helvetica;
+font-weight: 600;
+letter-spacing: 1.5px;
+line-height: 160%;
+}
+.imgholder {
+
+}
+
+
+
+/* Artists */
+.outerabout {
+  height: 500px;
+  background-color: blue;
+}
+.innerabout {
+  background-color: #3a7e89;
+  text-align: center;
+  margin: 2% 2% 2% 2%;
+
+}
+
+.innerabout h1 {
+font-size: 500%;
+font-family: helvetica;
+font-weight: 900;
+padding: 1%;
+color: #192d34;
+}
+.innerabout p {
+font-size: 200%;
+color: white;
+font-family: helvetica;
+font-weight: 600;
+letter-spacing: 1.5px;
+
+}
+#artists {
+  font-size: 400%;
+  font-weight: 900;
+  padding: 1% 1% 3% 1%;
+  color: #e9a3ab;
+  letter-spacing: 3px;
+  line-height: 100px;
+  font-family: 'Bowlby One SC', cursive;
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+
+}
+#artist h3 {
+  color:yellow;
+}
+
+
+/* Footer jannick*/
+footer {
     background-color: #192d34;
     display: flex;
     justify-content: space-around;
@@ -211,39 +313,6 @@ footer{
 footer img {
     padding: 15%;
     width:80%;
-}
-
-
-}
-.aboutcontent2 {
-  display: flex;
-  flex-direction: row-reverse;
-  background-color: lightgrey;
-}
-.textholder {
-width: 70%;
-color: white;
-margin: 2%;
-}
-.textholder h1 {
-font-size: 200%;
-color: #192d34;
-
-}
-.textholder p {
-font-size: 125%;
-color: #3a7e89;
-font-family: helvetica;
-font-weight: bold;
-letter-spacing: 1.5px;
-line-height: 160%;
-}
-.imgholder {
-
-}
-
-.txt2 {
-text-align: right;
 }
 
 @media screen and (max-height: 450px) {
@@ -259,16 +328,19 @@ text-align: right;
 }
 
 @media screen and (min-width: 768px) {
-/* About Page */
-/*
-.abouts img {
-width: 100%;
-height: 300px;
-object-fit: cover;
-object-position: center;
+  .aboutss img {
+  height: 400px;
+  }
+  .aboutcontent {
 
-}
-*/
+    flex-direction: row;
+  }
+  .aboutcontent2 {
+    flex-direction: row-reverse;
+  }
+  .txt2 {
+  text-align: right;
+  }
 /* Nav Bar */    #nav {
         padding: 0;
         padding-left: 5%;
