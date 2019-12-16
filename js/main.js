@@ -57,12 +57,18 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(function(json) {
       console.log(json);
       let current = json.current;
-      document.querySelector('#current-condition').innerHTML = `
-        <h2>${current.weather_descriptions}</h2>
-        <img src='${current.weather_icons}'>
-        <p>${current.temperature} &#8451</p>
-        <p>Føles som: ${current.feelslike} &#8451</p>
-      `;
+if( current.temperature<10){
+document.querySelector('#current-condition').innerHTML = `
+  <img src='${current.weather_icons}'>
+  <p>Det er ${current.temperature} &#8451 <br>Kom ind og få varmen med en Kaffe</p>
+`;}
+if( current.temperature>15){
+document.querySelector('#current-condition').innerHTML = `
+  <img src='${current.weather_icons}'>
+  <p>Det er ${current.temperature} &#8451 <br>Kom ind og køl ned med en øl</p>
+`;}
+
+
     });
 });
 /* Preloader - Ian */
@@ -109,5 +115,3 @@ setTimeout(function() {
     }
     document.querySelector("#artists").innerHTML += htmlTemplate;
   }
-
-  
