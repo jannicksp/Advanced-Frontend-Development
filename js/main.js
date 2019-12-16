@@ -120,6 +120,129 @@ window.addEventListener('load', function(){
     document.querySelector("#artists").innerHTML += htmlTemplate;
   }
 
+  /* Fetches the Google Sheet for the menu Jannick */
+  let sheetNumber3 = 2;
+  let sheetUrl3 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber3}/public/full?alt=json`;
+  console.log(sheetUrl3);
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  fetch(sheetUrl3)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json);
+      appendDrinks(json.feed.entry);
+    });
+
+  /* This appends the data from the json file, to the DOM - jannick */
+  function appendDrinks(drinks) {
+    console.log(drinks);
+    let htmlTemplate = "";
+    for (let drink of drinks) {
+      htmlTemplate += `
+          <article class="center">
+                <h2>${drink['gsx$nr']['$t']}.</h2>
+            <h2>${drink['gsx$drikke']['$t']}</h2>
+            <h3>&nbsp-&nbsp${drink['gsx$pris']['$t']}</h3>
+          </article>
+        `;
+      }
+        document.querySelector("#drinkmenus").innerHTML += htmlTemplate;
+        }
+
+  /* Fetches the Google Sheet for the menu Jannick */
+  let sheetNumber4 = 3;
+  let sheetUrl4 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber4}/public/full?alt=json`;
+  console.log(sheetUrl4);
+
+  fetch(sheetUrl4)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json);
+      appendSjus(json.feed.entry);
+    });
+
+  /* This appends the data from the json file, to the DOM - jannick */
+  function appendSjus(drinks) {
+    console.log(drinks);
+    let htmlTemplate = "";
+    for (let drink of drinks) {
+      htmlTemplate += `
+          <article class="center">
+                <h2>${drink['gsx$nr']['$t']}.</h2>
+            <h2>${drink['gsx$drikke']['$t']}</h2>
+            <h3>&nbsp-&nbsp${drink['gsx$pris']['$t']}</h3>
+          </article>
+        `;
+    }
+    document.querySelector("#sjusmenus").innerHTML += htmlTemplate;
+  }
+
+  /* Fetches the Google Sheet for the menu Jannick */
+  let sheetNumber5 = 4;
+  let sheetUrl5 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber5}/public/full?alt=json`;
+  console.log(sheetUrl5);
+
+  fetch(sheetUrl5)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json);
+      appendSnack(json.feed.entry);
+    });
+
+  /* This appends the data from the json file, to the DOM - jannick */
+  function appendSnack(snacks) {
+    console.log(snacks);
+    let htmlTemplate = "";
+    for (let snack of snacks) {
+      htmlTemplate += `
+          <article class="center">
+                <h2>${snack['gsx$nr']['$t']}.</h2>
+            <h2>${snack['gsx$snack']['$t']}</h2>
+            <h3>&nbsp-&nbsp${snack['gsx$pris']['$t']}</h3>
+          </article>
+        `;
+    }
+    document.querySelector("#snackmenus").innerHTML += htmlTemplate;
+  }
+
+  /* Fetches the Google Sheet for the menu Jannick */
+  let sheetNumber6 = 5;
+  let sheetUrl6 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber6}/public/full?alt=json`;
+  console.log(sheetUrl6);
+
+  fetch(sheetUrl6)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json);
+      appendmns(json.feed.entry);
+    });
+
+  /* This appends the data from the json file, to the DOM - jannick */
+  function appendmns(mns) {
+    console.log(mns);
+    let htmlTemplate = "";
+    for (let mn of mns) {
+      htmlTemplate += `
+          <article class="center">
+                <h2>${mn['gsx$nr']['$t']}.</h2>
+            <h2>${mn['gsx$drikke']['$t']}</h2>
+            <p>${mn['gsx$beskrivelse']['$t']}</p>
+            <h3>&nbsp-&nbsp${mn['gsx$pris']['$t']}</h3>
+          </article>
+        `;
+    }
+    document.querySelector("#menumenus").innerHTML += htmlTemplate;
+  }
+
   //Get the button:(go to top page Burhan)
   let mybutton = document.getElementById("gototop");
 
