@@ -85,7 +85,7 @@ window.addEventListener('load', function(){
     if (pageloader.style.opacity > 0) {
       pageloader.style.opacity -= 0.1;
     } else {
-      
+
       pageloader.style.display = "none";
     }
   }, 150);
