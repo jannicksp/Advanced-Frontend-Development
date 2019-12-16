@@ -85,7 +85,7 @@ window.addEventListener('load', function(){
     if (pageloader.style.opacity > 0) {
       pageloader.style.opacity -= 0.1;
     } else {
-      
+
       pageloader.style.display = "none";
     }
   }, 150);
@@ -118,4 +118,35 @@ window.addEventListener('load', function(){
         `;
     }
     document.querySelector("#artists").innerHTML += htmlTemplate;
+  }
+
+
+  /* Fetches the Google Sheet for the menu Jannick */
+  let sheetNumber3 = 2;
+  let sheetUrl3 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber3}/public/full?alt=json`;
+  console.log(sheetUrl3);
+
+  fetch(sheetUrl3)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json);
+      appendDrinks(json.feed.entry);
+    });
+
+  /* This appends the data from the json file, to the DOM - jannick */
+  function appendDrinks(drinks) {
+    console.log(drinks);
+    let htmlTemplate = "";
+    for (let drink of drinks) {
+      htmlTemplate += `
+          <article class="center">
+                <h2>${drink['gsx$nr']['$t']}.</h2>
+            <h2>${drink['gsx$drikke']['$t']}</h2>
+            <h3>&nbsp-&nbsp${drink['gsx$pris']['$t']}</h3>
+          </article>
+        `;
+    }
+    document.querySelector("#drinkmenus").innerHTML += htmlTemplate;
   }
