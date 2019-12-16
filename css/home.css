@@ -53,12 +53,16 @@ img {
 }
 
 .t-purple {
-  background-color: #7b5a9e;
+  background-image: url("../img/Path 31.png");
+ background-repeat: no-repeat;
+	background-size: contain;
   color: #fff;
 }
 
 .t-white {
-  background-color: #fff;
+  background-image: url("../img/about-sec.png");
+ background-repeat: no-repeat;
+	background-size: contain;
   color: #7b5a9e;
 }
 
@@ -71,7 +75,7 @@ img {
   background: #fff;
   color: #000;
 }
-footer {
+.footer {
 	width: 100%;
     background-color: #192d34;
     display: flex;
