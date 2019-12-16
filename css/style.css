@@ -16,26 +16,24 @@ img {
     cursor: pointer;
 }
 
- /* Preloader - Ian */
- /*
-.preloader {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999999999;
-  overflow: hidden;
+ /* Pageloader - Ian */
+
+ .pageloader {
+  align-items: center;
   background: white;
-  text-align: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.4s linear;
+  width: 100%;
+  z-index: 9999;
+  opacity: 1;
+  transform: opacity 1s linear;
 }
 
-.hide {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s 0.4s, opacity 0.4s linear;
-}
-*/
 
 
 .person{
