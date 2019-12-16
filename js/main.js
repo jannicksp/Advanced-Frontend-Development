@@ -57,33 +57,43 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(function(json) {
       console.log(json);
       let current = json.current;
-      document.querySelector('#current-condition').innerHTML = `
-        <h2>${current.weather_descriptions}</h2>
-        <img src='${current.weather_icons}'>
-        <p>${current.temperature} &#8451</p>
-        <p>Føles som: ${current.feelslike} &#8451</p>
-      `;
+if( current.temperature<10){
+document.querySelector('#current-condition').innerHTML = `
+  <img src='${current.weather_icons}'>
+  <p>Det er ${current.temperature} &#8451 <br>Kom ind og få varmen med en Kaffe</p>
+`;}
+if( current.temperature>15){
+document.querySelector('#current-condition').innerHTML = `
+  <img src='${current.weather_icons}'>
+  <p>Det er ${current.temperature} &#8451 <br>Kom ind og køl ned med en øl</p>
+`;}
+
+
     });
 });
-/* Preloader - Ian */
 
-function showLoader(show) {
-  let loader = document.querySelector('.preloader');
-  if (show) {
-    loader.classList.remove("hide");
-  } else {
-    loader.classList.add("hide");
-  }
-}
+/* Pageloader - Ian */
+const pageloader = document.querySelector('.pageloader');
 
-setTimeout(function() {
-    showLoader(false);
-  }, 500);
+
+window.addEventListener('load', function(){
+  setInterval(() => {
+
+    if (!pageloader.style.opacity) {
+      pageloader.style.opacity = 1;
+    }
+    if (pageloader.style.opacity > 0) {
+      pageloader.style.opacity -= 0.1;
+    } else {
+
+      pageloader.style.display = "none";
+    }
+  }, 150);
+});
 
   /* Fetches the Google Sheet for the About site - Ian */
-  let sheetId2 = "1tfF52Tp168bAyXVnjhIs_aKMJ-cAcFmM_ivLxAQ2vIU";
-  let sheetNumber2 = 1;
-  let sheetUrl2 = `https://spreadsheets.google.com/feeds/list/${sheetId2}/${sheetNumber2}/public/full?alt=json`;
+  let sheetNumber2 = 6;
+  let sheetUrl2 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber2}/public/full?alt=json`;
   console.log(sheetUrl2);
 
   fetch(sheetUrl2)
@@ -102,10 +112,184 @@ setTimeout(function() {
     for (let artist of artists) {
       htmlTemplate += `
           <article class="center">
-            <h2>${artist['gsx$kunstnere']['$t']}</h2>
+            <h2>${artist['gsx$kunstner']['$t']}</h2>
             <h5>&nbsp-&nbsp${artist['gsx$kunstform']['$t']}</h5>
           </article>
         `;
     }
     document.querySelector("#artists").innerHTML += htmlTemplate;
   }
+
+  /* Fetches the Google Sheet for the menu Jannick */
+  let sheetNumber3 = 2;
+  let sheetUrl3 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber3}/public/full?alt=json`;
+  console.log(sheetUrl3);
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  fetch(sheetUrl3)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json);
+      appendDrinks(json.feed.entry);
+    });
+
+  /* This appends the data from the json file, to the DOM - jannick */
+  function appendDrinks(drinks) {
+    console.log(drinks);
+    let htmlTemplate = "";
+    for (let drink of drinks) {
+      htmlTemplate += `
+          <article class="center">
+                <h2>${drink['gsx$nr']['$t']}.</h2>
+            <h2>${drink['gsx$drikke']['$t']}</h2>
+            <h3>&nbsp-&nbsp${drink['gsx$pris']['$t']}</h3>
+          </article>
+        `;
+      }
+        document.querySelector("#drinkmenus").innerHTML += htmlTemplate;
+        }
+
+  /* Fetches the Google Sheet for the menu Jannick */
+  let sheetNumber4 = 3;
+  let sheetUrl4 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber4}/public/full?alt=json`;
+  console.log(sheetUrl4);
+
+  fetch(sheetUrl4)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json);
+      appendSjus(json.feed.entry);
+    });
+
+  /* This appends the data from the json file, to the DOM - jannick */
+  function appendSjus(drinks) {
+    console.log(drinks);
+    let htmlTemplate = "";
+    for (let drink of drinks) {
+      htmlTemplate += `
+          <article class="center">
+                <h2>${drink['gsx$nr']['$t']}.</h2>
+            <h2>${drink['gsx$drikke']['$t']}</h2>
+            <h3>&nbsp-&nbsp${drink['gsx$pris']['$t']}</h3>
+          </article>
+        `;
+    }
+    document.querySelector("#sjusmenus").innerHTML += htmlTemplate;
+  }
+
+  /* Fetches the Google Sheet for the menu Jannick */
+  let sheetNumber5 = 4;
+  let sheetUrl5 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber5}/public/full?alt=json`;
+  console.log(sheetUrl5);
+
+  fetch(sheetUrl5)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json);
+      appendSnack(json.feed.entry);
+    });
+
+  /* This appends the data from the json file, to the DOM - jannick */
+  function appendSnack(snacks) {
+    console.log(snacks);
+    let htmlTemplate = "";
+    for (let snack of snacks) {
+      htmlTemplate += `
+          <article class="center">
+                <h2>${snack['gsx$nr']['$t']}.</h2>
+            <h2>${snack['gsx$snack']['$t']}</h2>
+            <h3>&nbsp-&nbsp${snack['gsx$pris']['$t']}</h3>
+          </article>
+        `;
+    }
+    document.querySelector("#snackmenus").innerHTML += htmlTemplate;
+  }
+
+  /* Fetches the Google Sheet for the menu Jannick */
+  let sheetNumber6 = 5;
+  let sheetUrl6 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber6}/public/full?alt=json`;
+  console.log(sheetUrl6);
+
+  fetch(sheetUrl6)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json);
+      appendmns(json.feed.entry);
+    });
+
+  /* This appends the data from the json file, to the DOM - jannick */
+  function appendmns(mns) {
+    console.log(mns);
+    let htmlTemplate = "";
+    for (let mn of mns) {
+      htmlTemplate += `
+          <article class="center">
+                <h2>${mn['gsx$nr']['$t']}.</h2>
+            <h2>${mn['gsx$drikke']['$t']}</h2>
+            <p>${mn['gsx$beskrivelse']['$t']}</p>
+            <h3>&nbsp-&nbsp${mn['gsx$pris']['$t']}</h3>
+          </article>
+        `;
+    }
+    document.querySelector("#menumenus").innerHTML += htmlTemplate;
+  }
+
+  //Get the button:(go to top page Burhan)
+  let mybutton = document.getElementById("gototop");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    console.log(document.body.scrollTop)
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
+//dato og tid - Burhan
+
+//jeg har gjort så tal under 10 skal tilføje et 0, hvis i er mindre end 10 så tilføjes der et 0.
+function addZero(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
+//addZero er den function som tilføjer 0, når tallet er 1 cifret.
+
+function myFunction() {
+var d = new Date();
+var n = JSON.stringify(d.getFullYear());
+var k = addZero(d.getDate());
+var b = addZero(d.getMonth()+1);
+var t = addZero(d.getHours());
+var m = addZero(d.getMinutes());
+
+//jeg kalder på de variabler der skal vises.
+
+document.getElementById("demo").innerHTML = k +  "/" +  b + " " + t + ":" + m + "-" + n;
+}
+
+//her kalder vi på functionerne så de aktiveres.
+
+myFunction();
+checkTime(m);
