@@ -109,5 +109,3 @@ setTimeout(function() {
     }
     document.querySelector("#artists").innerHTML += htmlTemplate;
   }
-
-  
