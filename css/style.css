@@ -210,11 +210,12 @@ span{
 .eventcontainer{
   display: flex;
   justify-content: flex-start;
-  flex-direction: row;
+  flex-direction: column;
   background-color: #3a7e89;
   margin-bottom: 3%;
   color:white;
 }
+
 
 .brodtekst{
 font-weight: 400;
@@ -226,9 +227,6 @@ font-size: 20px;
 letter-spacing: 0.4px;
 }
 
-.event{
-  margin:0 auto;
-}
 
 
 #gototop {
@@ -255,7 +253,7 @@ letter-spacing: 0.4px;
 .graph{
   font-size: 2em;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   background-color: lightgrey;
   margin-bottom: 3%;
 }
@@ -265,7 +263,7 @@ letter-spacing: 0.4px;
   text-align: left;
   flex-direction: column;
   background-color: #3a7e89;
-width: 50%;
+width: 100%;
 }
 .brødtekst2{
   padding-top: 4%;
@@ -276,9 +274,8 @@ width: 50%;
 }
 .chart-container {
   position: relative;
-  margin: auto;
-  height: 50%;
-  width: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .sendemail{
@@ -633,6 +630,7 @@ footer img {
     margin: 2% 2% 2% 2%;
 
   }
+
 }
 
 /* Nav Bar */    #nav {
@@ -642,8 +640,8 @@ footer img {
 
     }
 
-
 }
+
 
 @media (min-width: 992px){
 .col-lg-12 {
