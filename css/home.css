@@ -65,7 +65,7 @@ img {
 }
 .pricing-table .card:nth-child(2) {
   margin: 0 30px;
-  z-index: 2;
+  z-index: 1;
   width: 250px;
   height: 400px;
   background: #ff416c;
@@ -85,7 +85,7 @@ img {
   font-size: 6rem;
 }
 .pricing-table .card:nth-child(1) .buy-button, .pricing-table .card:nth-child(3) .buy-button {
-	z-index: 9999999999999;
+	z-index: 1;
   width: 230px;
   height: 170px;
 }
@@ -102,7 +102,7 @@ img {
   font-size: 7.5rem;
   position: relative;
   margin: 10px 0px 20px;
-  z-index: 2;
+  z-index: 1;
 }
 .pricing-table .card .price span {
   font-size: 1.8rem;
@@ -115,7 +115,7 @@ img {
   content: "";
   color: rgba(255, 255, 255, 0.06);
   font-size: 9.5rem;
-  z-index: -1;
+  z-index: 1;
   right: -30%;
   bottom: 15%;
   text-shadow: 0 0 0px rgba(51, 55, 69, 0);
@@ -274,9 +274,7 @@ img {
 
 
 
-.beer{
-	z-index: -121;
-}
+
 
 /* Footer - koko*/
 .footer {
@@ -294,7 +292,7 @@ img {
 
 
 
- /* Pageloader - Ian */
+ /* Pageloader */
 
  .pageloader {
   align-items: center;
@@ -340,7 +338,7 @@ img {
      min-width: 100%;
      min-height: 100%;
      position: relative;
-     z-index: 1;
+     z-index: 0;
     width: 100%;
  }
 
@@ -350,7 +348,7 @@ img {
      position: absolute;
      top: 0px;
      left: 0px;
-     z-index: 2;
+     z-index: 1;
      background-image: url("../img/.png");
      opacity: 1;
  }
@@ -389,7 +387,7 @@ span{
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 999999;
     top: 0;
     left: 0;
     background-image: url(../img/overlay.png);
@@ -405,6 +403,7 @@ span{
     width: 100%;
     text-align: center;
     margin-top: 30px;
+	z-index: 999999;
 }
 
 .overlay a {
@@ -426,7 +425,7 @@ span{
     top: 20px;
     right: 45px;
     font-size: 60px;
-    z-index: 9999;
+    z-index: 9999999;
 }
 
 
@@ -565,7 +564,7 @@ footer img {
 }
 .pricing-table .card:nth-child(2) {
   margin: 0 30px;
-  z-index: 2;
+  z-index: 1;
   width: 250px;
   height: 400px;
   background: #ff416c;
@@ -585,7 +584,7 @@ footer img {
   font-size: 6rem;
 }
 .pricing-table .card:nth-child(1) .buy-button, .pricing-table .card:nth-child(3) .buy-button {
-	z-index: 9999999999999;
+	z-index: 1;
   width: 165px;
   height: 140px;
 }
@@ -602,7 +601,7 @@ footer img {
   font-size: 7.5rem;
   position: relative;
   margin: 10px 0px 20px;
-  z-index: 2;
+  z-index: 1;
 }
 .pricing-table .card .price span {
   font-size: 1.8rem;
@@ -615,7 +614,7 @@ footer img {
   content: "";
   color: rgba(255, 255, 255, 0.06);
   font-size: 9.5rem;
-  z-index: -1;
+  z-index: 1;
   right: -30%;
   bottom: 15%;
   text-shadow: 0 0 0px rgba(51, 55, 69, 0);
