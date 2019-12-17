@@ -297,6 +297,8 @@ canvas {
 }
 #demo{
   font-size: 2em;
+  border: solid;
+  margin-right: 89%;
 
 }
 
