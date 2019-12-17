@@ -264,6 +264,50 @@ window.addEventListener('load', function(){
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
 
+
+  //infograph chart.js
+
+  let sheetNumber8 = 7;
+  let sheetUrl8 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber8}/public/full?alt=json`;
+  console.log(sheetUrl8);
+
+  fetch(sheetUrl8)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json);
+      appendChart(json.feed.entry);
+    });
+
+  function appendChart(data) {
+    console.log(data);
+
+    // prepare data
+    let marks = [];
+    let numbers = [];
+    let colors = [];
+
+    for (let mark of data) {
+      marks.push(`${mark['gsx$mark']['$t']}: ${mark['gsx$explanation']['$t']}`);
+      numbers.push(mark['gsx$number']['$t']);
+      colors.push(mark['gsx$color']['$t']);
+    }
+
+    // generate chart
+    let chart = document.getElementById('chart');
+    let myDoughnutChart = new Chart(chart, {
+      type: 'doughnut',
+      data: {
+        datasets: [{
+          data: numbers,
+          backgroundColor: colors
+        }],
+        labels: marks
+      }
+    });
+  }
+
 //dato og tid - Burhan
 
 //jeg har gjort så tal under 10 skal tilføje et 0, hvis i er mindre end 10 så tilføjes der et 0.
