@@ -437,6 +437,9 @@ section-heading h3{
   border-radius: 5px;
   color: white;
 }
+.text-center{
+  text-align: center;
+}
 
 #menus, #menus2, #drinkmenus, #sjusmenus, #snackmenus, #menumenus{
   margin:5%;
