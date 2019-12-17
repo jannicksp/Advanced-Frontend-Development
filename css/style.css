@@ -10,9 +10,12 @@ html {
     font-size: 10px;
     font-family: 'PT sans narrow', sans-serif;
     overflow-x: hidden;
-    background-image: url(../img/pattern.png)
-}
+    background-image: url(../img/pattern.png) !important;
+  }
+  body{
+  background-image: url(../img/pattern.png)
 
+  }
 img {
     cursor: pointer;
 }
@@ -67,18 +70,22 @@ img {
   align-items: center;
   justify-content: space-around;
   margin: 5%;
+  color:#3a7e89;
+}
+
+.centerMoreItems a{
+  color:#3a7e89;
 }
 
 
 .contact a {
   font-size: 20px;
-  color: black;
-
+  color: #3a7e89;
 }
 
 .contact h3 {
   font-size: 25px;
-  color: black
+  color: #3a7e89;
 
 }
 
@@ -393,6 +400,14 @@ section-heading h3{
 
 }
 
+.opening {
+  color:#3a7e89;
+}
+
+.darkblue{
+  color:#192d34;
+}
+
 #sendMessageButton{
   width: 25%;
   background-color: #3a7e89;
@@ -414,6 +429,138 @@ section-heading h3{
   margin-left:30%;
     margin-right:30%;
 }
+
+/* Imported Gallery Template - Ian - Originally made by Majed*/
+
+.hello {
+  opacity: 1 !important;
+}
+.full {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.full .content {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+.full .content img {
+  left: 50%;
+  transform: translate3d(0, 0, 0);
+  animation: zoomin 1s ease;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.gallery {
+  padding: 50px;
+  display: grid;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 1px;
+}
+.gallery img {
+  max-width: 100%;
+  transition: all 1.5s ease;
+}
+.gallery img:hover {
+  
+}
+.gallery .content {
+  padding: 4px;
+}
+.gallery .gallery-item {
+  transition: grid-row-start 300ms linear;
+  transition: transform 300ms ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.gallery .gallery-item:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  }
+}
+@media (max-width: 400px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+}
+@-moz-keyframes zoomin {
+  0% {
+    max-width: 50%;
+
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+
+  }
+  70% {
+    max-width: 50%;
+
+  }
+  100% {
+    max-width: 100%;
+
+  }
+}
+
+@-webkit-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+  }
+  70% {
+    max-width: 50%;
+  }
+  100% {
+    max-width: 100%;
+  }
+}
+@-o-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+  }
+  70% {
+    max-width: 50%;
+  }
+  100% {
+    max-width: 100%;
+  }
+}
+@keyframes zoomin {
+  0% {
+    max-width: 50%;
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+  }
+  70% {
+    max-width: 50%;
+  }
+  100% {
+    max-width: 100%;
+  }
+}
+
 
 /* Footer jannick*/
 footer {
@@ -462,4 +609,10 @@ footer img {
     }
 
 
+}
+
+@media (min-width: 992px){
+.col-lg-12 {
+  flex: 1 1 100% !important;
+}
 }
