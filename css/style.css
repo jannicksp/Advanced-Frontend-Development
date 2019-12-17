@@ -187,6 +187,9 @@ span{
 .eventcontainer{
   display: flex;
   justify-content: flex-start;
+  flex-direction: row;
+  background-color: lightgrey;
+  margin-bottom: 3%;
 }
 
 .brodtekst{
@@ -200,9 +203,7 @@ letter-spacing: 0.4px;
 }
 
 .event{
-  margin-top: 70px;
-  margin-right: 5%;
-  margin-bottom: 20%;
+  margin:0 auto;
 }
 
 
@@ -227,14 +228,39 @@ letter-spacing: 0.4px;
   background-color: #555; /* Add a dark-grey background on hover */
 }
 
-.chart-container{
+.graph{
+  font-size: 2em;
   display: flex;
-  align-content: center;
+  flex-direction: row;
+  background-color: lightgrey;
+  margin-bottom: 3%;
+}
+
+.brødtekst2{
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 5%;
+  line-height: 40px;
+
+}
+
+.chart-container {
+  position: relative;
+  margin: auto;
   height: 50%;
   width: 50%;
 }
 
+canvas {
+  border: 1px solid white;
 }
+#demo{
+  font-size: 1.4em;
+}
+
 /* About Page */
 .aboutover {
 text-align: center;
