@@ -53,7 +53,7 @@ img {
 }
 .pricing-table .card:nth-child(1) {
   background: #7f7fd5;
-  background: linear-gradient(to left, #91eae4, #86a8e7, #7f7fd5);
+  background: #E4E4E4;
 }
 .pricing-table .card:nth-child(1) .price::before {
   content: "$20";
@@ -65,14 +65,14 @@ img {
   width: 250px;
   height: 400px;
   background: #ff416c;
-  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  background: #E4E4E4;
 }
 .pricing-table .card:nth-child(2) .price::before {
   content: "$50";
 }
 .pricing-table .card:nth-child(3) {
   background: #00b09b;
-  background: linear-gradient(to right, #96c93d, #00b09b);
+  background: #E4E4E4;
 }
 .pricing-table .card:nth-child(3) .price::before {
   content: "$100";
