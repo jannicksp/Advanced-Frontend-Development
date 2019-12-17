@@ -205,6 +205,10 @@ span{
 .eventcontainer{
   display: flex;
   justify-content: flex-start;
+  flex-direction: row;
+  background-color: #3a7e89;
+  margin-bottom: 3%;
+  color:white;
 }
 
 .brodtekst{
@@ -218,9 +222,7 @@ letter-spacing: 0.4px;
 }
 
 .event{
-  margin-top: 70px;
-  margin-right: 5%;
-  margin-bottom: 20%;
+  margin:0 auto;
 }
 
 
@@ -245,14 +247,42 @@ letter-spacing: 0.4px;
   background-color: #555; /* Add a dark-grey background on hover */
 }
 
-.chart-container{
+.graph{
+  font-size: 2em;
   display: flex;
-  align-content: center;
+  flex-direction: row;
+  background-color: lightgrey;
+  margin-bottom: 3%;
+}
+
+.brødtekst2{
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  background-color: #3a7e89;
+width: 50%;
+}
+.brødtekst2{
+  padding-top: 4%;
+  padding-left:10%;
+  padding-right: 10%;
+  color: white;
+  line-height: 1.8em;
+}
+.chart-container {
+  position: relative;
+  margin: auto;
   height: 50%;
   width: 50%;
 }
 
+canvas {
+  border: 1px solid #3a7e89;
 }
+#demo{
+  font-size: 1.4em;
+}
+
 /* About Page */
 .aboutover {
 text-align: center;

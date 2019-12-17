@@ -372,4 +372,3 @@ document.getElementById("demo").innerHTML = k +  "/" +  b + " " + t + ":" + m + 
 //her kalder vi på functionerne så de aktiveres.
 
 myFunction();
-checkTime(m);
