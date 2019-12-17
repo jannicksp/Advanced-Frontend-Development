@@ -37,7 +37,9 @@ img {
 }
 
 
-
+.blue{
+  background-color: blue;
+}
 .person{
   display: flex;
   width: 50%;
@@ -327,12 +329,28 @@ letter-spacing: 1.5px;
 #artist h3 {
   color:yellow;
 }
+section-heading h3{
+  color: blue !important;
 
+}
+
+#sendMessageButton{
+  width: 25%;
+  background-color: #3a7e89;
+  border-color:  #3a7e89;
+  border-radius: 5px;
+  color: white;
+}
+
+#menus{
+  margin:5%;
+    border: 1px solid grey;
+}
 
 /* Footer jannick*/
 footer {
     background-color: #192d34;
-    display: flex;
+    display: flex!important;
     justify-content: space-around;
     align-items: center;
 }
