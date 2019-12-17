@@ -60,7 +60,7 @@ img {
   background: #E4E4E4;
 }
 .pricing-table .card:nth-child(1) .price::before {
-  content: "$20";
+  content: "$25";
 
 }
 .pricing-table .card:nth-child(2) {
@@ -95,7 +95,7 @@ img {
   font-size: 1rem;
 }
 .pricing-table .card .type {
-  margin-top: 30px;
+  margin-top: 10px;
   letter-spacing: 0.1rem;
 }
 .pricing-table .card .price {
@@ -429,12 +429,14 @@ span{
     z-index: 9999;
 }
 
+
 #nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7% !important;
+    padding: 7%;
 }
+
 
 
 footer {
@@ -558,7 +560,7 @@ footer img {
   background: #E4E4E4;
 }
 .pricing-table .card:nth-child(1) .price::before {
-  content: "$20";
+  content: "$65";
 
 }
 .pricing-table .card:nth-child(2) {
