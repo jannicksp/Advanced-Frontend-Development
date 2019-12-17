@@ -48,6 +48,9 @@ img {
   width: 50%;
 }
 
+#current-condition {
+  width: 100%;
+}
 .center{
   display: flex;
   align-items: center;
@@ -471,7 +474,7 @@ section-heading h3{
   transition: all 1.5s ease;
 }
 .gallery img:hover {
-  
+
 }
 .gallery .content {
   padding: 4px;
