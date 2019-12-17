@@ -67,7 +67,7 @@ img {
 }
 
 .centerMoreItems{
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: space-around;
   margin: 5%;
@@ -192,6 +192,19 @@ span{
     right: 45px;
     font-size: 60px;
     z-index: 9999;
+}
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
 
 
@@ -434,10 +447,6 @@ section-heading h3{
   color: #3a7e89;
   line-height: 5px;
 }
-#menus2{
-  margin-left:30%;
-    margin-right:30%;
-}
 
 /* Imported Gallery Template - Ian - Originally made by Majed*/
 
@@ -498,6 +507,7 @@ section-heading h3{
   .gallery {
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   }
+
 }
 @media (max-width: 400px) {
   .gallery {
@@ -633,6 +643,9 @@ footer img {
     margin: 2% 2% 2% 2%;
 
   }
+  .centerMoreItems {
+    display: flex;
+}
 }
 
 /* Nav Bar */    #nav {
