@@ -67,7 +67,7 @@ img {
 }
 
 .centerMoreItems{
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: space-around;
   margin: 5%;
@@ -193,6 +193,19 @@ span{
     font-size: 60px;
     z-index: 9999;
 }
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 
 
 #nav {
@@ -210,25 +223,24 @@ span{
 .eventcontainer{
   display: flex;
   justify-content: flex-start;
-  flex-direction: row;
+  flex-direction: column;
   background-color: #3a7e89;
   margin-bottom: 3%;
   color:white;
 }
+
 
 .brodtekst{
 font-weight: 400;
 margin-top: 70px;
 margin-right:10%;
 margin-left: 5%;
+margin-bottom: 10%;
 line-height: 40px;
 font-size: 20px;
 letter-spacing: 0.4px;
 }
 
-.event{
-  margin:0 auto;
-}
 
 
 #gototop {
@@ -255,7 +267,7 @@ letter-spacing: 0.4px;
 .graph{
   font-size: 2em;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   background-color: lightgrey;
   margin-bottom: 3%;
 }
@@ -265,7 +277,7 @@ letter-spacing: 0.4px;
   text-align: left;
   flex-direction: column;
   background-color: #3a7e89;
-width: 50%;
+width: 100%;
 }
 .brødtekst2{
   padding-top: 4%;
@@ -276,9 +288,8 @@ width: 50%;
 }
 .chart-container {
   position: relative;
-  margin: auto;
-  height: 50%;
-  width: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .sendemail{
@@ -288,6 +299,7 @@ width: 50%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+
 }
 
 .sendemail:hover, a:active {
@@ -300,7 +312,7 @@ canvas {
 #demo{
   font-size: 2em;
   border: solid;
-  margin-right: 89%;
+  text-align: center;
 
 }
 
@@ -390,7 +402,7 @@ letter-spacing: 1.5px;
 padding-bottom: 10px;
 }
 #artists {
-  font-size: 200%;
+  font-size: 130%;
   font-weight: 900;
   padding: 1% 5% 3% 5%;
   color: #e9a3ab;
@@ -424,6 +436,9 @@ section-heading h3{
   border-radius: 5px;
   color: white;
 }
+.text-center{
+  text-align: center;
+}
 
 #menus, #menus2, #drinkmenus, #sjusmenus, #snackmenus, #menumenus{
   margin:5%;
@@ -433,10 +448,6 @@ section-heading h3{
   background-color: lightgrey;
   color: #3a7e89;
   line-height: 5px;
-}
-#menus2{
-  margin-left:30%;
-    margin-right:30%;
 }
 
 /* Imported Gallery Template - Ian - Originally made by Majed*/
@@ -498,6 +509,7 @@ section-heading h3{
   .gallery {
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   }
+
 }
 @media (max-width: 400px) {
   .gallery {
@@ -596,7 +608,7 @@ footer img {
     }
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 770px) {
 /* About page - Ian */
   .aboutss img {
   height: 400px;
@@ -633,6 +645,106 @@ footer img {
     margin: 2% 2% 2% 2%;
 
   }
+  .centerMoreItems {
+    display: flex;
+}
+.eventcontainer{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  background-color: #3a7e89;
+  margin-bottom: 3%;
+  color:white;
+}
+
+
+.brodtekst{
+font-weight: 400;
+margin-top: 70px;
+margin-right:10%;
+margin-left: 5%;
+line-height: 40px;
+font-size: 20px;
+letter-spacing: 0.4px;
+}
+
+.event{
+  margin:0 auto;
+}
+
+
+#gototop {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #e9a3ab; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+
+}
+
+#gototop:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.graph{
+  font-size: 2em;
+  display: flex;
+  flex-direction: row;
+  background-color: lightgrey;
+  margin-bottom: 3%;
+}
+
+.brødtekst2{
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  background-color: #3a7e89;
+width: 50%;
+}
+.brødtekst2{
+  padding-top: 4%;
+  padding-left:10%;
+  padding-right: 10%;
+  color: white;
+  line-height: 1.8em;
+}
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 50%;
+  width: 50%;
+}
+
+.sendemail{
+  background-color: #e9a3ab;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.sendemail:hover, a:active {
+  background-color: #192d34;
+}
+}
+canvas {
+  border: 1px solid #3a7e89;
+}
+#demo{
+  font-size: 2em;
+  border: solid;
+
+}
+
 }
 
 /* Nav Bar */    #nav {
@@ -642,8 +754,8 @@ footer img {
 
     }
 
-
 }
+
 
 @media (min-width: 992px){
 .col-lg-12 {
