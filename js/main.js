@@ -243,6 +243,42 @@ window.addEventListener('load', function(){
     document.querySelector("#menumenus").innerHTML += htmlTemplate;
   }
 
+  /* Fetches the Google Sheet for the menu Jannick */
+  let sheetNumber9 = 8;
+  let sheetUrl9 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber9}/public/full?alt=json`;
+  console.log(sheetUrl9);
+
+  fetch(sheetUrl9)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json);
+      appendBottle(json.feed.entry);
+    });
+
+  /* This appends the data from the json file, to the DOM - jannick */
+  function appendBottle(bottles) {
+    console.log(bottles);
+    let htmlTemplate = "";
+    for (let bottle of bottles) {
+      htmlTemplate += `
+      <article class="center">
+        <h2>${bottle['gsx$nr']['$t']}. &nbsp</h2>
+        <h4>${bottle['gsx$bryggeri']['$t']}&nbsp &nbsp </h4>
+        <h4>${bottle['gsx$ølnavn']['$t']}</h4>
+        <h4>${bottle['gsx$ølkat']['$t']} |</h4>
+        <h4>${bottle['gsx$alk']['$t']} |</h4>
+          <h5>${bottle['gsx$beskrivelse']['$t']} | </h5>
+              <h3>${bottle['gsx$pris']['$t']}Kr|</h3>
+            <br></br>
+              <br></br>
+      </article>
+    `;
+    }
+    document.querySelector("#menus2").innerHTML += htmlTemplate;
+  }
+
   //Get the button:(go to top page Burhan)
   let mybutton = document.getElementById("gototop");
 
@@ -337,41 +373,3 @@ document.getElementById("demo").innerHTML = k +  "/" +  b + " " + t + ":" + m + 
 
 myFunction();
 checkTime(m);
-
-
-
-/* Fetches the Google Sheet for the menu Jannick */
-let sheetNumber9 = 8;
-let sheetUrl9 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber9}/public/full?alt=json`;
-console.log(sheetUrl9);
-
-fetch(sheetUrl9)
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(json) {
-    console.log(json);
-    appendBottle(json.feed.entry);
-  });
-
-/* This appends the data from the json file, to the DOM - jannick */
-function appendBottle(bottles) {
-  console.log(bottles);
-  let htmlTemplate = "";
-  for (let bottle of bottles) {
-    htmlTemplate += `
-    <article class="center">
-      <h2>${bottle['gsx$nr']['$t']}. &nbsp</h2>
-      <h4>${bottle['gsx$bryggeri']['$t']}&nbsp &nbsp </h4>
-      <h4>${bottle['gsx$ølnavn']['$t']}</h4>
-      <h4>${bottle['gsx$ølkat']['$t']} |</h4>
-      <h4>${bottle['gsx$alk']['$t']} |</h4>
-        <h5>${bottle['gsx$beskrivelse']['$t']} | </h5>
-            <h3>${bottle['gsx$pris']['$t']}Kr|</h3>
-          <br></br>
-            <br></br>
-    </article>
-  `;
-  }
-  document.querySelector("#menus2").innerHTML += htmlTemplate;
-}
