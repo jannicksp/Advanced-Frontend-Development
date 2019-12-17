@@ -344,12 +344,12 @@ margin-bottom: 5%;
 
 }
 .textholder h1 {
-font-size: 200%;
+font-size: 180%;
 color: #192d34;
 
 }
 .textholder p {
-font-size: 150%;
+font-size: 130%;
 color: #3a7e89;
 font-family: helvetica;
 font-weight: 600;
@@ -370,34 +370,35 @@ line-height: 160%;
 .innerabout {
   background-color: #3a7e89;
   text-align: center;
-  margin: 2% 2% 2% 2%;
+  margin: 3% 3% 3% 3%;
 
 }
 
 .innerabout h1 {
-font-size: 500%;
+font-size: 300%;
 font-family: helvetica;
 font-weight: 900;
 padding: 1%;
 color: #192d34;
 }
 .innerabout p {
-font-size: 200%;
+font-size: 150%;
 color: white;
 font-family: helvetica;
 font-weight: 600;
 letter-spacing: 1.5px;
-
+padding-bottom: 10px;
 }
 #artists {
-  font-size: 400%;
+  font-size: 200%;
   font-weight: 900;
-  padding: 1% 1% 3% 1%;
+  padding: 1% 5% 3% 5%;
   color: #e9a3ab;
   letter-spacing: 3px;
-  line-height: 100px;
+  line-height: 50px;
   font-family: 'Bowlby One SC', cursive;
   text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+
 
 }
 #artist h3 {
@@ -595,12 +596,12 @@ footer img {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 450px) {
+/* About page - Ian */
   .aboutss img {
   height: 400px;
   }
   .aboutcontent {
-
     flex-direction: row;
   }
   .aboutcontent2 {
@@ -609,6 +610,31 @@ footer img {
   .txt2 {
   text-align: right;
   }
+  .textholder h1 {
+  font-size: 200%;
+
+  }
+  .textholder p {
+  font-size: 150%;
+
+  }
+  .innerabout h1 {
+  font-size: 500%;
+  }
+  .innerabout p {
+  font-size: 200%;
+  }
+  #artists {
+    font-size: 400%;
+    line-height: 100px;
+  }
+
+  .innerabout {
+    margin: 2% 2% 2% 2%;
+
+  }
+}
+
 /* Nav Bar */    #nav {
         padding: 0;
         padding-left: 5%;
