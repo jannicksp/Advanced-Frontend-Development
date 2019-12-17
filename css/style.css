@@ -199,8 +199,9 @@ span{
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  background-color: lightgrey;
+  background-color: #3a7e89;
   margin-bottom: 3%;
+  color:white;
 }
 
 .brodtekst{
@@ -251,13 +252,16 @@ letter-spacing: 0.4px;
   display: flex;
   text-align: left;
   flex-direction: column;
-  margin-right: 5%;
-  margin-left: 5%;
-  margin-top: 5%;
-  line-height: 40px;
-
+  background-color: #3a7e89;
+width: 50%;
 }
-
+.brødtekst2{
+  padding-top: 4%;
+  padding-left:10%;
+  padding-right: 10%;
+  color: white;
+  line-height: 1.8em;
+}
 .chart-container {
   position: relative;
   margin: auto;
@@ -266,7 +270,7 @@ letter-spacing: 0.4px;
 }
 
 canvas {
-  border: 1px solid white;
+  border: 1px solid #3a7e89;
 }
 #demo{
   font-size: 1.4em;
