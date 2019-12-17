@@ -10,9 +10,12 @@ html {
     font-size: 10px;
     font-family: 'PT sans narrow', sans-serif;
     overflow-x: hidden;
-    background-image: url(../img/pattern.png)
-}
+    background-image: url(../img/pattern.png) !important;
+  }
+  body{
+  background-image: url(../img/pattern.png)
 
+  }
 img {
     cursor: pointer;
 }
@@ -51,23 +54,38 @@ img {
   justify-content: center;
 }
 
+.centerbox{
+  display: flex;
+  justify-content: center;
+}
+.centermenu{
+  display: flex;
+  justify-content: center;
+      border: 1px solid grey;
+
+}
+
 .centerMoreItems{
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin: 5%;
+  color:#3a7e89;
+}
+
+.centerMoreItems a{
+  color:#3a7e89;
 }
 
 
 .contact a {
   font-size: 20px;
-  color: black;
-
+  color: #3a7e89;
 }
 
 .contact h3 {
   font-size: 25px;
-  color: black
+  color: #3a7e89;
 
 }
 
@@ -187,6 +205,10 @@ span{
 .eventcontainer{
   display: flex;
   justify-content: flex-start;
+  flex-direction: row;
+  background-color: #3a7e89;
+  margin-bottom: 3%;
+  color:white;
 }
 
 .brodtekst{
@@ -200,9 +222,7 @@ letter-spacing: 0.4px;
 }
 
 .event{
-  margin-top: 70px;
-  margin-right: 5%;
-  margin-bottom: 20%;
+  margin:0 auto;
 }
 
 
@@ -227,14 +247,42 @@ letter-spacing: 0.4px;
   background-color: #555; /* Add a dark-grey background on hover */
 }
 
-.chart-container{
+.graph{
+  font-size: 2em;
   display: flex;
-  align-content: center;
+  flex-direction: row;
+  background-color: lightgrey;
+  margin-bottom: 3%;
+}
+
+.brødtekst2{
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  background-color: #3a7e89;
+width: 50%;
+}
+.brødtekst2{
+  padding-top: 4%;
+  padding-left:10%;
+  padding-right: 10%;
+  color: white;
+  line-height: 1.8em;
+}
+.chart-container {
+  position: relative;
+  margin: auto;
   height: 50%;
   width: 50%;
 }
 
+canvas {
+  border: 1px solid #3a7e89;
 }
+#demo{
+  font-size: 1.4em;
+}
+
 /* About Page */
 .aboutover {
 text-align: center;
@@ -339,6 +387,14 @@ section-heading h3{
 
 }
 
+.opening {
+  color:#3a7e89;
+}
+
+.darkblue{
+  color:#192d34;
+}
+
 #sendMessageButton{
   width: 25%;
   background-color: #3a7e89;
@@ -347,9 +403,9 @@ section-heading h3{
   color: white;
 }
 
-#menus, #menus2{
+#menus, #menus2, #drinkmenus, #sjusmenus, #snackmenus, #menumenus{
   margin:5%;
-    border: 1px solid grey;
+    border: 3px solid grey;
     border-radius: 10px;
 
   background-color: lightgrey;
@@ -540,4 +596,10 @@ footer img {
     }
 
 
+}
+
+@media (min-width: 992px){
+.col-lg-12 {
+  flex: 1 1 100% !important;
+}
 }

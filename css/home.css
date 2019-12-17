@@ -11,7 +11,11 @@ html {
     font-weight: 100;
     font-family: 'PT sans narrow', sans-serif;
     overflow-x: hidden;
-    background-image: url(../img/pattern.png)
+    background-image: url(../img/pattern.png) !important;
+}
+body{
+  background-image: url(../img/pattern.png)
+
 }
 
 img {
@@ -26,7 +30,7 @@ img {
     .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
     .MultiCarousel .leftLst { left:0; }
     .MultiCarousel .rightLst { right:0; }
-    
+
         .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
 
 /*menu section home - koko*/
@@ -57,7 +61,7 @@ img {
 }
 .pricing-table .card:nth-child(1) .price::before {
   content: "$20";
-	
+
 }
 .pricing-table .card:nth-child(2) {
   margin: 0 30px;
@@ -446,7 +450,7 @@ span{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7%;
+    padding: 7% !important;
 }
 
 
