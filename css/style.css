@@ -350,6 +350,15 @@ section-heading h3{
 #menus, #menus2{
   margin:5%;
     border: 1px solid grey;
+    border-radius: 10px;
+
+  background-color: lightgrey;
+  color: #3a7e89;
+  line-height: 5px;
+}
+#menus2{
+  margin-left:30%;
+    margin-right:30%;
 }
 
 /* Footer jannick*/
