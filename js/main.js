@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", function() {
   // the DOM is fully loaded
   console.log("Document ready!");
 
-  // url: http://api.apixu.com/v1/current.json?key=19474b792e92493e809105720180110&q=Aarhus
+  // url: Working APi weather Jannick
 
   const url = 'http://api.weatherstack.com/current';
-  const key = 'f104663606762aadb9858a8367d0d156';
+  const key = 'bd0a450124fc4cf4e16547a0bffd1426';
   let query = 'Aarhus';
 
   fetch(`${url}?access_key=${key}&query=${query}`)
