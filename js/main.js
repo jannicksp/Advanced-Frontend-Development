@@ -1,4 +1,51 @@
 "use strict";
+//overlay nav
+    if (typeof jQuery == 'undefined')
+        document.write(unescape("%3Cscript src='js/jquery-1.9.js'" +
+            "type='text/javascript'%3E%3C/script%3E"))
+
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+
+// weather api Jannick
+document.addEventListener("DOMContentLoaded", function() {
+  // the DOM is fully loaded
+  console.log("Document ready!");
+
+  // url: http://api.apixu.com/v1/current.json?key=19474b792e92493e809105720180110&q=Aarhus
+
+  const url = 'http://api.weatherstack.com/current';
+  const key = 'f104663606762aadb9858a8367d0d156';
+  let query = 'Aarhus';
+
+  fetch(`${url}?access_key=${key}&query=${query}`)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json);
+      let current = json.current;
+if( current.temperature<10){
+document.querySelector('#current-condition').innerHTML = `
+  <img src='${current.weather_icons}'>
+  <p>Det er ${current.temperature} &#8451 <br>Kom ind og få varmen med en Kaffe</p>
+`;}
+if( current.temperature>15){
+document.querySelector('#current-condition').innerHTML = `
+  <img src='${current.weather_icons}'>
+  <p>Det er ${current.temperature} &#8451 <br>Kom ind og køl ned med en øl</p>
+`;}
+
+
+    });
+});
+
+
 
 // fetch sheet menu 1 Jannick
 let sheetId = "1cnnMCXs8Tv9jrciZiQg4lwVNjVCEueYKdZ5JDFzTbxU";
@@ -39,38 +86,6 @@ function appendMenus(menus) {
   document.querySelector("#menus").innerHTML += htmlTemplate;
 }
 
-// weather api Jannick
-document.addEventListener("DOMContentLoaded", function() {
-  // the DOM is fully loaded
-  console.log("Document ready!");
-
-  // url: http://api.apixu.com/v1/current.json?key=19474b792e92493e809105720180110&q=Aarhus
-
-  const url = 'http://api.weatherstack.com/current';
-  const key = 'f104663606762aadb9858a8367d0d156';
-  let query = 'Aarhus';
-
-  fetch(`${url}?access_key=${key}&query=${query}`)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(json) {
-      console.log(json);
-      let current = json.current;
-if( current.temperature<10){
-document.querySelector('#current-condition').innerHTML = `
-  <img src='${current.weather_icons}'>
-  <p>Det er ${current.temperature} &#8451 <br>Kom ind og få varmen med en Kaffe</p>
-`;}
-if( current.temperature>15){
-document.querySelector('#current-condition').innerHTML = `
-  <img src='${current.weather_icons}'>
-  <p>Det er ${current.temperature} &#8451 <br>Kom ind og køl ned med en øl</p>
-`;}
-
-
-    });
-});
 
 /* Pageloader - Ian */
 const pageloader = document.querySelector('.pageloader');
