@@ -712,14 +712,14 @@ letter-spacing: 0.4px;
   margin-bottom: 3%;
 }
 
-.brødtekst2{
+.brodtekst2{
   display: flex;
   text-align: left;
   flex-direction: column;
   background-color: #3a7e89;
 width: 50%;
 }
-.brødtekst2{
+.brodtekst2{
   padding-top: 4%;
   padding-left:10%;
   padding-right: 10%;
