@@ -347,7 +347,7 @@ section-heading h3{
   color: white;
 }
 
-#menus{
+#menus, #menus2{
   margin:5%;
     border: 1px solid grey;
 }
