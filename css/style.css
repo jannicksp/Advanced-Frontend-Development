@@ -10,9 +10,12 @@ html {
     font-size: 10px;
     font-family: 'PT sans narrow', sans-serif;
     overflow-x: hidden;
-    background-image: url(../img/pattern.png)
-}
+    background-image: url(../img/pattern.png) !important;
+  }
+  body{
+  background-image: url(../img/pattern.png)
 
+  }
 img {
     cursor: pointer;
 }
@@ -67,18 +70,22 @@ img {
   align-items: center;
   justify-content: space-around;
   margin: 5%;
+  color:#3a7e89;
+}
+
+.centerMoreItems a{
+  color:#3a7e89;
 }
 
 
 .contact a {
   font-size: 20px;
-  color: black;
-
+  color: #3a7e89;
 }
 
 .contact h3 {
   font-size: 25px;
-  color: black
+  color: #3a7e89;
 
 }
 
@@ -350,6 +357,14 @@ section-heading h3{
 
 }
 
+.opening {
+  color:#3a7e89;
+}
+
+.darkblue{
+  color:#192d34;
+}
+
 #sendMessageButton{
   width: 25%;
   background-color: #3a7e89;
@@ -419,4 +434,10 @@ footer img {
     }
 
 
+}
+
+@media (min-width: 992px){
+.col-lg-12 {
+  flex: 1 1 100% !important;
+}
 }
