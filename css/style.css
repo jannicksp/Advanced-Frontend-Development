@@ -48,9 +48,7 @@ img {
   width: 50%;
 }
 
-#current-condition {
-  width: 100%;
-}
+
 .center{
   display: flex;
   align-items: center;
@@ -139,7 +137,9 @@ img {
 
 #logouden img {
     width: 200px;
+
 }
+
 
 #logo{
     width:25%;
@@ -191,7 +191,9 @@ span{
     top: 20px;
     right: 45px;
     font-size: 60px;
+    z-index: 9999;
 }
+
 
 #nav {
     display: flex;
