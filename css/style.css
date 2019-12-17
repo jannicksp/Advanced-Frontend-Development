@@ -53,6 +53,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #192d34;
 }
 
 .centerbox{
@@ -432,6 +433,9 @@ section-heading h3{
 
 .darkblue{
   color:#192d34;
+}
+.center h1{
+  color: black;
 }
 
 #sendMessageButton{
