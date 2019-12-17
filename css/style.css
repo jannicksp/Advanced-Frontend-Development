@@ -67,7 +67,7 @@ img {
 }
 
 .centerMoreItems{
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: space-around;
   margin: 5%;
@@ -193,6 +193,19 @@ span{
     font-size: 60px;
     z-index: 9999;
 }
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 
 
 #nav {
@@ -210,11 +223,12 @@ span{
 .eventcontainer{
   display: flex;
   justify-content: flex-start;
-  flex-direction: row;
+  flex-direction: column;
   background-color: #3a7e89;
   margin-bottom: 3%;
   color:white;
 }
+
 
 .brodtekst{
 font-weight: 400;
@@ -226,9 +240,6 @@ font-size: 20px;
 letter-spacing: 0.4px;
 }
 
-.event{
-  margin:0 auto;
-}
 
 
 #gototop {
@@ -255,7 +266,7 @@ letter-spacing: 0.4px;
 .graph{
   font-size: 2em;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   background-color: lightgrey;
   margin-bottom: 3%;
 }
@@ -265,7 +276,7 @@ letter-spacing: 0.4px;
   text-align: left;
   flex-direction: column;
   background-color: #3a7e89;
-width: 50%;
+width: 100%;
 }
 .brødtekst2{
   padding-top: 4%;
@@ -276,9 +287,8 @@ width: 50%;
 }
 .chart-container {
   position: relative;
-  margin: auto;
-  height: 50%;
-  width: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .sendemail{
@@ -424,6 +434,9 @@ section-heading h3{
   border-radius: 5px;
   color: white;
 }
+.text-center{
+  text-align: center;
+}
 
 #menus, #menus2, #drinkmenus, #sjusmenus, #snackmenus, #menumenus{
   margin:5%;
@@ -433,10 +446,6 @@ section-heading h3{
   background-color: lightgrey;
   color: #3a7e89;
   line-height: 5px;
-}
-#menus2{
-  margin-left:30%;
-    margin-right:30%;
 }
 
 /* Imported Gallery Template - Ian - Originally made by Majed*/
@@ -498,6 +507,7 @@ section-heading h3{
   .gallery {
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   }
+
 }
 @media (max-width: 400px) {
   .gallery {
@@ -633,6 +643,9 @@ footer img {
     margin: 2% 2% 2% 2%;
 
   }
+  .centerMoreItems {
+    display: flex;
+}
 }
 
 /* Nav Bar */    #nav {
@@ -642,8 +655,8 @@ footer img {
 
     }
 
-
 }
+
 
 @media (min-width: 992px){
 .col-lg-12 {
