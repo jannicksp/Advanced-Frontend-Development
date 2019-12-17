@@ -51,6 +51,17 @@ img {
   justify-content: center;
 }
 
+.centerbox{
+  display: flex;
+  justify-content: center;
+}
+.centermenu{
+  display: flex;
+  justify-content: center;
+      border: 1px solid grey;
+
+}
+
 .centerMoreItems{
   display: flex;
   align-items: center;
@@ -347,9 +358,9 @@ section-heading h3{
   color: white;
 }
 
-#menus, #menus2{
+#menus, #menus2, #drinkmenus, #sjusmenus, #snackmenus, #menumenus{
   margin:5%;
-    border: 1px solid grey;
+    border: 3px solid grey;
     border-radius: 10px;
 
   background-color: lightgrey;

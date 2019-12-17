@@ -23,7 +23,7 @@ function appendMenus(menus) {
   let htmlTemplate = "";
   for (let menu of menus) {
     htmlTemplate += `
-        <article class="center">
+        <article class="centermenu">
           <h2>${menu['gsx$nr']['$t']}. &nbsp</h2>
           <h4>${menu['gsx$bryggeri']['$t']}&nbsp &nbsp </h4>
           <h4>${menu['gsx$ølnavn']['$t']}</h4>
@@ -142,7 +142,7 @@ window.addEventListener('load', function(){
     let htmlTemplate = "";
     for (let drink of drinks) {
       htmlTemplate += `
-          <article class="center">
+          <article class="centermenu">
                 <h2>${drink['gsx$nr']['$t']}.</h2>
             <h2>${drink['gsx$drikke']['$t']}</h2>
             <h3>&nbsp-&nbsp${drink['gsx$pris']['$t']}</h3>
@@ -172,7 +172,7 @@ window.addEventListener('load', function(){
     let htmlTemplate = "";
     for (let drink of drinks) {
       htmlTemplate += `
-          <article class="center">
+          <article class="centermenu">
                 <h2>${drink['gsx$nr']['$t']}.</h2>
             <h2>${drink['gsx$drikke']['$t']}</h2>
             <h3>&nbsp-&nbsp${drink['gsx$pris']['$t']}</h3>
@@ -202,7 +202,7 @@ window.addEventListener('load', function(){
     let htmlTemplate = "";
     for (let snack of snacks) {
       htmlTemplate += `
-          <article class="center">
+          <article class="centermenu">
                 <h2>${snack['gsx$nr']['$t']}.</h2>
             <h2>${snack['gsx$snack']['$t']}</h2>
             <h3>&nbsp-&nbsp${snack['gsx$pris']['$t']}</h3>
@@ -232,10 +232,10 @@ window.addEventListener('load', function(){
     let htmlTemplate = "";
     for (let mn of mns) {
       htmlTemplate += `
-          <article class="center">
+          <article class="centermenu">
                 <h2>${mn['gsx$nr']['$t']}.</h2>
             <h2>${mn['gsx$drikke']['$t']}</h2>
-            <p>${mn['gsx$beskrivelse']['$t']}</p>
+            <h4>${mn['gsx$beskrivelse']['$t']}</h4>
             <h3>&nbsp-&nbsp${mn['gsx$pris']['$t']}</h3>
           </article>
         `;
@@ -263,7 +263,7 @@ window.addEventListener('load', function(){
     let htmlTemplate = "";
     for (let bottle of bottles) {
       htmlTemplate += `
-      <article class="center">
+      <article class="centermenu">
         <h2>${bottle['gsx$nr']['$t']}. &nbsp</h2>
         <h4>${bottle['gsx$bryggeri']['$t']}&nbsp &nbsp </h4>
         <h4>${bottle['gsx$ølnavn']['$t']}</h4>
