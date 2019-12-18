@@ -34,7 +34,7 @@ img {
   top: 0;
   transition: opacity 0.4s linear;
   width: 100%;
-  z-index: 9999;
+  z-index: 98;
   opacity: 1;
   transform: opacity 1s linear;
 }
