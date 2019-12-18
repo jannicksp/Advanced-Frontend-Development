@@ -34,7 +34,7 @@ img {
   top: 0;
   transition: opacity 0.4s linear;
   width: 100%;
-  z-index: 9999;
+  z-index: 98;
   opacity: 1;
   transform: opacity 1s linear;
 }
@@ -154,7 +154,7 @@ span{
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     top: 0;
     left: 0;
     background-image: url(../img/overlay.png);
@@ -235,6 +235,7 @@ font-weight: 400;
 margin-top: 70px;
 margin-right:10%;
 margin-left: 5%;
+margin-bottom: 10%;
 line-height: 40px;
 font-size: 20px;
 letter-spacing: 0.4px;
@@ -298,6 +299,7 @@ width: 100%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+
 }
 
 .sendemail:hover, a:active {
@@ -310,10 +312,19 @@ canvas {
 #demo{
   font-size: 2em;
   border: solid;
-  margin-right: 89%;
-
+  text-align: center;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+.iframeresp{
+  width: 100%;
+height: 500px;
+}
+=======
+>>>>>>> parent of f05d4ff... Merge branch 'master' of https://github.com/jannicksp/Advanced-Frontend-Development
+=======
+>>>>>>> parent of f05d4ff... Merge branch 'master' of https://github.com/jannicksp/Advanced-Frontend-Development
 /* About Page */
 .aboutover {
 text-align: center;
@@ -643,16 +654,127 @@ footer img {
   .centerMoreItems {
     display: flex;
 }
+.eventcontainer{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  background-color: #3a7e89;
+  margin-bottom: 3%;
+  color:white;
 }
 
-/* Nav Bar */    #nav {
+
+.brodtekst{
+font-weight: 400;
+margin-top: 70px;
+margin-right:10%;
+margin-left: 5%;
+line-height: 40px;
+font-size: 20px;
+letter-spacing: 0.4px;
+}
+
+.event{
+  margin:0 auto;
+}
+
+
+#gototop {
+  display: none !important; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #e9a3ab; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+
+}
+
+#gototop:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.graph{
+  font-size: 2em;
+  display: flex;
+  flex-direction: row;
+  background-color: lightgrey;
+  margin-bottom: 3%;
+}
+
+.brødtekst2{
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  background-color: #3a7e89;
+width: 50%;
+}
+.brødtekst2{
+  padding-top: 4%;
+  padding-left:10%;
+  padding-right: 10%;
+  color: white;
+  line-height: 1.8em;
+}
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 50%;
+  width: 50%;
+}
+
+.sendemail{
+  background-color: #e9a3ab;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.sendemail:hover, a:active {
+  background-color: #192d34;
+}
+
+canvas {
+  border: 1px solid #3a7e89;
+}
+#demo{
+  font-size: 2em;
+  border: solid;
+
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+.iframeresp{
+width: 500px;
+height: 600px;
+=======
+
+>>>>>>> parent of f05d4ff... Merge branch 'master' of https://github.com/jannicksp/Advanced-Frontend-Development
+=======
+
+>>>>>>> parent of f05d4ff... Merge branch 'master' of https://github.com/jannicksp/Advanced-Frontend-Development
+}
+/* Nav Bar */
+
+ #nav {
         padding: 0;
         padding-left: 5%;
         padding-right: 5%;
 
     }
-
 }
+
+
+
+
 
 
 @media (min-width: 992px){
