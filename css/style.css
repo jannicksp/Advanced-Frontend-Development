@@ -53,7 +53,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #192d34;
 }
 
 .centerbox{
@@ -316,10 +315,13 @@ canvas {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .iframeresp{
   width: 100%;
 height: 500px;
 }
+=======
+>>>>>>> parent of f05d4ff... Merge branch 'master' of https://github.com/jannicksp/Advanced-Frontend-Development
 /* About Page */
 .aboutover {
 text-align: center;
@@ -406,7 +408,7 @@ letter-spacing: 1.5px;
 padding-bottom: 10px;
 }
 #artists {
-  font-size: 200%;
+  font-size: 130%;
   font-weight: 900;
   padding: 1% 5% 3% 5%;
   color: #e9a3ab;
@@ -431,9 +433,6 @@ section-heading h3{
 
 .darkblue{
   color:#192d34;
-}
-.center h1{
-  color: black;
 }
 
 #sendMessageButton{
@@ -615,7 +614,7 @@ footer img {
     }
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 770px) {
 /* About page - Ian */
   .aboutss img {
   height: 400px;
@@ -670,7 +669,6 @@ font-weight: 400;
 margin-top: 70px;
 margin-right:10%;
 margin-left: 5%;
-margin-bottom: 5%;
 line-height: 40px;
 font-size: 20px;
 letter-spacing: 0.4px;
@@ -710,14 +708,14 @@ letter-spacing: 0.4px;
   margin-bottom: 3%;
 }
 
-.brodtekst2{
+.brødtekst2{
   display: flex;
   text-align: left;
   flex-direction: column;
   background-color: #3a7e89;
 width: 50%;
 }
-.brodtekst2{
+.brødtekst2{
   padding-top: 4%;
   padding-left:10%;
   padding-right: 10%;
@@ -750,12 +748,15 @@ canvas {
 #demo{
   font-size: 2em;
   border: solid;
-  margin-right: 89%;
 
 }
+<<<<<<< HEAD
 .iframeresp{
 width: 500px;
 height: 600px;
+=======
+
+>>>>>>> parent of f05d4ff... Merge branch 'master' of https://github.com/jannicksp/Advanced-Frontend-Development
 }
 /* Nav Bar */
 
