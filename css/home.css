@@ -443,7 +443,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-<<<<<<< HEAD
+
 }
 
 footer img {
@@ -456,22 +456,20 @@ footer img {
         font-size: 20px
     }
 
-<<<<<<< HEAD
-=======
-}
+
 
 footer img {
     padding: 15%;
     width:80%;
 }
->>>>>>> parent of f05d4ff... Merge branch 'master' of https://github.com/jannicksp/Advanced-Frontend-Development
+
 
 @media screen and (max-width: 450px) {
     .overlay a {
         font-size: 20px
     }
 
-<<<<<<< HEAD
+
 #gototop {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
@@ -497,7 +495,11 @@ footer img {
 text-align: center;
 font-weight: bold;
 padding: 1.5%;
-=======
+	}
+	@media screen and (max-width: 400px) {
+
+ 
+	
     .overlay .closebtn {
         font-size: 40px;
         top: 15px;
@@ -523,38 +525,9 @@ padding: 1.5%;
     .MultiCarousel .rightLst { right:0; }
 
         .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
->>>>>>> parent of f05d4ff... Merge branch 'master' of https://github.com/jannicksp/Advanced-Frontend-Development
 
 
-=======
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-	.introtext{
-  display: flex;
-  align-items: center;
-		position: relative;
-  justify-content: center;
-  margin-top: -10%;
 
-}
-.introtext h1{
-  font-size: 30px;
-}
-	.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
-    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
-        .MultiCarousel .MultiCarousel-inner .item { float: left;}
-        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:0px; margin:5px; background:#f1f1f1; color:#666;}
-    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
-    .MultiCarousel .leftLst { left:0; }
-    .MultiCarousel .rightLst { right:0; }
-
-        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
-
-
->>>>>>> parent of f05d4ff... Merge branch 'master' of https://github.com/jannicksp/Advanced-Frontend-Development
 	/*about us section - koko*/
 .example-item {
   padding: 0em;
@@ -796,7 +769,7 @@ padding: 1.5%;
 
 
 
-}
+	
 
 @media screen and (min-width: 768px) {
 
