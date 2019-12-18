@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // url: Working APi weather Jannick
 
   const url = 'http://api.weatherstack.com/current';
-  const key = 'bd0a450124fc4cf4e16547a0bffd1426';
+  const key = 'ea16570b262110805a1a137639705334';
   let query = 'Aarhus';
 
   fetch(`${url}?access_key=${key}&query=${query}`)
