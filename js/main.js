@@ -127,7 +127,7 @@ window.addEventListener('load', function(){
     let htmlTemplate = "";
     for (let artist of artists) {
       htmlTemplate += `
-          <article class="center">
+          <article >
             <h2>${artist['gsx$kunstner']['$t']}</h2>
             <h5>&nbsp-&nbsp${artist['gsx$kunstform']['$t']}</h5>
           </article>
