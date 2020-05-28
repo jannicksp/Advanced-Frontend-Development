@@ -35,12 +35,9 @@ img {
 
 /*menu section home - koko*/
 .pricing-table {
-  position: relative;
-  top: 200px;
-  left: 70%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   display: flex;
+  justify-content: center;
+    align-items: center;
 }
 .pricing-table .card {
   width: 220px;
