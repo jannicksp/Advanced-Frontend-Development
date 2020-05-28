@@ -675,13 +675,14 @@ margin-top: 70px;
 margin-right:10%;
 margin-left: 5%;
 margin-bottom: 5%;
-line-height: 40px;
+line-height: 30px;
 font-size: 20px;
 letter-spacing: 0.4px;
 }
 
 .event{
   margin:0 auto;
+
 }
 
 
@@ -758,7 +759,7 @@ width: 50%;
 }
 .iframeresp{
 width: 500px;
-height: 600px;
+height: 500px;
 }
 /* Nav Bar */
 
