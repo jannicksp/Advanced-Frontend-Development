@@ -332,7 +332,7 @@ padding: 1.5%;
 }
 .aboutss img {
 width: 100%;
-height: 500px;
+height: 400px;
 object-fit: cover;
 object-position: center;
 vertical-align: middle;
@@ -359,14 +359,8 @@ margin-top: 5%;
 margin-bottom: 5%;
 
 }
-.textholder h2 {
+.textholder h1 {
 font-size: 180%;
-color: #192d34;
-
-}
-
-.textholder h3 {
-font-size: 150%;
 color: #192d34;
 
 }
@@ -382,33 +376,7 @@ line-height: 160%;
 
 }
 
-* {
-  box-sizing: border-box;
-}
 
-.column {
-  float: left;
-  width: 33.3%;
-  padding: 5px;
-}
-
-.row{
-    margin: 2%;
-}
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 500px) {
-  .column {
-    width: 100%;
-  }
-}
-a { color: inherit; }
 
 /* Artists */
 .outerabout {
@@ -654,7 +622,7 @@ footer img {
 @media screen and (min-width: 450px) {
 /* About page - Ian */
   .aboutss img {
-  height: 500px;
+  height: 400px;
   }
   .aboutcontent {
     flex-direction: row;
@@ -665,8 +633,8 @@ footer img {
   .txt2 {
   text-align: right;
   }
-  .textholder h2 {
-  font-size: 180%;
+  .textholder h1 {
+  font-size: 200%;
 
   }
   .textholder p {
@@ -697,7 +665,6 @@ footer img {
   flex-direction: row;
   background-color: #3a7e89;
   margin-bottom: 3%;
-  margin-top: 2%;
   color:white;
 }
 
@@ -792,7 +759,7 @@ width: 50%;
 }
 .iframeresp{
 width: 500px;
-height: 520px;
+height: 500px;
 }
 /* Nav Bar */
 
