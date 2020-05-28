@@ -30,7 +30,7 @@ img {
 .MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
     .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
         .MultiCarousel .MultiCarousel-inner .item { float: left;}
-        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:43px; margin:90px; background:#f1f1f1; color:#666;}
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:43px; margin:90px;color:#666;}
     .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
     .MultiCarousel .leftLst { left:0; }
     .MultiCarousel .rightLst { right:0; }
@@ -365,6 +365,7 @@ img {
 }
 .introtext h1{
   font-size: 50px;
+   color:white;
 }
 
 /* Parallax container */
@@ -434,10 +435,12 @@ span{
 
 
 #nav {
+    padding: 0;
+    padding-left: 5%;
+    padding-right: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7%;
 }
 
 
