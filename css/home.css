@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 /* Koko*/
+.footer-dark{
+background-color: #192d34;
+color: white;
+}
 
 html {
     scroll-behavior: smooth;
@@ -285,6 +289,9 @@ img {
 .footer img {
     padding: 15%;
     width:80%;
+}
+.footer h3{
+  color:white;
 }
 
 
