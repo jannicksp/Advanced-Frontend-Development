@@ -665,6 +665,7 @@ footer img {
   flex-direction: row;
   background-color: #3a7e89;
   margin-bottom: 3%;
+  margin-top: 2%;
   color:white;
 }
 
@@ -759,7 +760,7 @@ width: 50%;
 }
 .iframeresp{
 width: 500px;
-height: 500px;
+height: 520px;
 }
 /* Nav Bar */
 
