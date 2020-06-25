@@ -286,17 +286,18 @@ function appendBottle(bottles) {
   let htmlTemplate = "";
   for (let bottle of bottles) {
     htmlTemplate += `
-      <article class="centermenu">
-        <h2>${bottle['gsx$nr']['$t']}. &nbsp</h2>
-        <h4>${bottle['gsx$bryggeri']['$t']}&nbsp &nbsp </h4>
-        <h4>${bottle['gsx$ølnavn']['$t']}</h4>
-        <h4>${bottle['gsx$ølkat']['$t']} |</h4>
-        <h4>${bottle['gsx$alk']['$t']} |</h4>
-          <h5>${bottle['gsx$beskrivelse']['$t']} | </h5>
-              <h3>${bottle['gsx$pris']['$t']}Kr|</h3>
-            <br></br>
-              <br></br>
-      </article>
+      <table>
+      <tbody>
+      <tr>
+        <td class="td1">${bottle['gsx$nr']['$t']}.</td>
+        <td class="td2">${bottle['gsx$bryggeri']['$t']}</td>
+        <td class="td3">${bottle['gsx$ølnavn']['$t']}</td>
+        <td class="td4">${bottle['gsx$ølkat']['$t']} </td>
+        <td class="td5">${bottle['gsx$alk']['$t']} </td>
+        <td class="td7">${bottle['gsx$pris']['$t']}Kr</td>
+              </tr>
+              </tbody>
+              </table>
     `;
   }
   document.querySelector("#menus2").innerHTML += htmlTemplate;
