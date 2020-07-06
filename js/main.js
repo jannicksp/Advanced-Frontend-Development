@@ -165,11 +165,16 @@ function appendDrinks(drinks) {
   let htmlTemplate = "";
   for (let drink of drinks) {
     htmlTemplate += `
-          <article class="centermenu">
-                <h2>${drink['gsx$nr']['$t']}.</h2>
-            <h2>${drink['gsx$drikke']['$t']}</h2>
-            <h3>&nbsp-&nbsp${drink['gsx$pris']['$t']}</h3>
-          </article>
+    <table>
+      <tbody>
+        <tr>
+            <td>${drink['gsx$nr']['$t']}.</td>
+            <td>${drink['gsx$drikke']['$t']}</td>
+            <td>${drink['gsx$pris']['$t']}</td>
+         
+        </tr>
+    </tbody>
+  </table>
         `;
   }
   document.querySelector("#drinkmenus").innerHTML += htmlTemplate;
@@ -195,11 +200,15 @@ function appendSjus(drinks) {
   let htmlTemplate = "";
   for (let drink of drinks) {
     htmlTemplate += `
-          <article class="centermenu">
-                <h2>${drink['gsx$nr']['$t']}.</h2>
-            <h2>${drink['gsx$drikke']['$t']}</h2>
-            <h3>&nbsp-&nbsp${drink['gsx$pris']['$t']}</h3>
-          </article>
+    <table>
+      <tbody>
+        <tr>
+            <td>${drink['gsx$nr']['$t']}.</td>
+            <td>${drink['gsx$drikke']['$t']}</td>
+            <td>${drink['gsx$pris']['$t']}</td>
+        </tr>
+      </tbody>
+    </table>
         `;
   }
   document.querySelector("#sjusmenus").innerHTML += htmlTemplate;
@@ -225,11 +234,15 @@ function appendSnack(snacks) {
   let htmlTemplate = "";
   for (let snack of snacks) {
     htmlTemplate += `
-          <article class="centermenu">
-                <h2>${snack['gsx$nr']['$t']}.</h2>
-            <h2>${snack['gsx$snack']['$t']}</h2>
-            <h3>&nbsp-&nbsp${snack['gsx$pris']['$t']}</h3>
-          </article>
+    <table>
+      <tbody>
+        <tr>
+            <td>${snack['gsx$nr']['$t']}.</td>
+            <td>${snack['gsx$snack']['$t']}</td>
+            <td>${snack['gsx$pris']['$t']}</td>
+        </tr>
+      </tbody>
+    </table>
         `;
   }
   document.querySelector("#snackmenus").innerHTML += htmlTemplate;
@@ -255,12 +268,16 @@ function appendmns(mns) {
   let htmlTemplate = "";
   for (let mn of mns) {
     htmlTemplate += `
-          <article class="centermenu">
-                <h2>${mn['gsx$nr']['$t']}.</h2>
-            <h2>${mn['gsx$drikke']['$t']}</h2>
-            <h4>${mn['gsx$beskrivelse']['$t']}</h4>
-            <h3>&nbsp-&nbsp${mn['gsx$pris']['$t']}</h3>
-          </article>
+    <table>
+      <tbody>
+        <tr>
+            <td>${mn['gsx$nr']['$t']}.</td>
+            <td>${mn['gsx$drikke']['$t']}</td>
+            <td>${mn['gsx$beskrivelse']['$t']}</td>
+            <td>${mn['gsx$pris']['$t']}</td>
+        </tr>
+      </tbody>
+    </table>
         `;
   }
   document.querySelector("#menumenus").innerHTML += htmlTemplate;
