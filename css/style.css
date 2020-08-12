@@ -248,6 +248,20 @@ font-size: 20px;
 letter-spacing: 0.4px;
 }
 
+.btneve {
+text-decoration: none;
+background-color: #e9a3ab;
+padding: 3%;
+border-radius: 30px;
+font-size: 10px;
+}
+
+.btnmarg {
+margin: 7% 0 5% 0;
+}
+
+
+
 
 
 #gototop {
