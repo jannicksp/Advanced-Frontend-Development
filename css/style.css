@@ -634,6 +634,7 @@ footer {
     justify-content: space-around;
     padding: 30px;
     color: white;
+    font-family: helvetica;
 }
 
 footer img {
@@ -653,6 +654,16 @@ footer h4{
 
 footer p{
   padding-bottom: 20px;
+}
+
+footer ul{
+  list-style: none;
+}
+footer li{
+  margin-bottom: 10px;
+}
+footer p{
+  font-size:10px;
 }
 
 @media screen and (max-height: 450px) {
