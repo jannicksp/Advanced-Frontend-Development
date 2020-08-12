@@ -329,6 +329,10 @@ canvas {
 height: 500px;
 }
 /* About Page */
+.picarticle img{
+height: 200px;
+
+}
 .aboutover {
 text-align: center;
 font-weight: bold;
@@ -822,10 +826,11 @@ width: 50%;
   margin-right: 89%;
 
 }
+@media only screen and (min-width: 1200px) {
 .iframeresp{
 width: 500px;
 height: 520px;
-}
+}}
 /* Nav Bar */
 
  #nav {
