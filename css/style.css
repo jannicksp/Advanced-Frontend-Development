@@ -330,7 +330,28 @@ height: 500px;
 }
 /* About Page */
 .picarticle img{
-height: 200px;
+height: 300px;
+
+
+
+}
+
+.picarticle h2{
+  font-size: 25px;
+  text-align: center;
+}
+
+.picarticle h3{
+  font-size: 20px;
+  margin-top:10px;
+
+}
+
+.picarticle p{
+  font-size: 14px;
+  font-style: italic;
+  line-height: 27px;
+  margin-top:15px;
 
 }
 .aboutover {
