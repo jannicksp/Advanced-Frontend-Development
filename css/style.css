@@ -400,6 +400,10 @@ object-position: center;
 vertical-align: middle;
 }
 
+.picarticle a{
+  font-size: 16px;
+}
+
 .aboutcontent {
   display: flex;
   flex-direction: column;
@@ -464,6 +468,7 @@ line-height: 160%;
   clear: both;
   display: table;
 }
+
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 500px) {
