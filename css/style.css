@@ -421,13 +421,14 @@ width: 70%;
 color: white;
 margin: 2%;
 display: inline-block;
-margin-top: 5%;
+
 margin-bottom: 5%;
 
 }
 .textholder h2 {
 font-size: 180%;
 color: black;
+margin: 0% 0 0% 0;
 
 }
 
@@ -440,7 +441,7 @@ color: #192d34;
 font-size: 130%;
 color: white;
 font-family: helvetica;
-font-weight: 600;
+font-weight: 400;
 letter-spacing: 1.5px;
 line-height: 160%;
 }
@@ -757,8 +758,10 @@ footer p{
   .txt2 {
   text-align: right;
   }
+
   .textholder h2 {
-  font-size: 180%;
+  font-size: 300%;
+
 
   }
   .textholder p {
@@ -790,6 +793,7 @@ footer p{
   background-color: #3a7e89;
   margin: 2% 3% 3% 3%;
   color:white;
+
 }
 .eventcontainer2{
   display: flex;
@@ -892,6 +896,12 @@ width: 50%;
 .iframeresp{
 width: 500px;
 height: 520px;
+
+}
+.iframeresp2{
+width: 500px;
+height: 390px;
+
 }}
 /* Nav Bar */
 
