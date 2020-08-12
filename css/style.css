@@ -704,6 +704,14 @@ footer img {
   margin: 2% 3% 3% 3%;
   color:white;
 }
+.eventcontainer2{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  background-color: #3a7e89;
+  margin: 2% 3% 3% 3%;
+  color:white;
+}
 
 
 .brodtekst{
@@ -719,7 +727,6 @@ letter-spacing: 0.4px;
 
 .event{
   margin:0 auto;
-
 }
 
 
