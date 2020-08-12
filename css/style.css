@@ -539,7 +539,6 @@ section-heading h3{
 }
 
 #sendMessageButton{
-  width: 25%;
   background-color: #3a7e89;
   border-color:  #3a7e89;
   border-radius: 5px;
@@ -691,9 +690,14 @@ section-heading h3{
   display: flex;
 }
 /* Footer jannick*/
+@media only screen and (max-width: 600px) {
+footer{
+  flex-wrap: wrap;
+}
+}
 footer {
     background-color: #192d34;
-    display: flex!important;
+    display: flex;
     justify-content: space-around;
     padding: 55px;
     color: white;
