@@ -339,7 +339,6 @@ padding: 1.5%;
 }
 .aboutss img {
 width: 100%;
-height: 500px;
 object-fit: cover;
 object-position: center;
 vertical-align: middle;
@@ -680,9 +679,6 @@ footer p{
 
 @media screen and (min-width: 450px) {
 /* About page - Ian */
-  .aboutss img {
-  height: 500px;
-  }
   .aboutcontent {
     flex-direction: row;
     margin: 2% 3% 3% 3%;
