@@ -421,17 +421,19 @@ width: 70%;
 color: white;
 margin: 2%;
 display: inline-block;
-
 margin-bottom: 5%;
 
 }
 .textholder h2 {
 font-size: 180%;
-color: black;
+color: white;
 margin: 0% 0 0% 0;
 
-}
 
+}
+.textholder i {
+font-weight: 100;
+}
 .textholder h3 {
 font-size: 150%;
 color: #192d34;
