@@ -1,7 +1,5 @@
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -129,7 +127,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30%;
+      margin-top: 5%;
+    color: white;
 
 }
 .introtext h1{
@@ -342,16 +341,59 @@ canvas {
 height: 500px;
 }
 /* About Page */
+.picarticle a:before{
+content: ">";
+display: inline;
+}
+.picarticle a{
+  text-decoration: none;
+  color: #3a7e89;
+  font-size:15px;
+}
+.picarticle img{
+height: 300px;
+}
+
+.picarticle h2{
+  font-size: 25px;
+  text-align: center;
+}
+
+.picarticle h3{
+  font-size: 20px;
+  margin-top:10px;
+
+}
+
+.picarticle p{
+  font-size: 14px;
+  font-style: italic;
+  line-height: 27px;
+  margin-top:15px;
+}
+
+.picarticle span{
+  font-size: 14px;
+  line-height: 27px;
+  margin-top:15px;
+  color: black;
+}
+
 .aboutover {
 text-align: center;
 font-weight: bold;
 padding: 1.5%;
 
 }
-.aboutss {
 
-}
 .aboutss img {
+width: 100%;
+object-fit: cover;
+object-position: center;
+vertical-align: middle;
+}
+
+.picarticle img {
 width: 100%;
 object-fit: cover;
 object-position: center;
@@ -671,6 +713,8 @@ footer p{
 
 footer ul{
   list-style: none;
+  margin: 0;
+    padding: 0;
 }
 footer li{
   margin-bottom: 10px;
@@ -835,10 +879,11 @@ width: 50%;
   margin-right: 89%;
 
 }
+@media only screen and (min-width: 1200px) {
 .iframeresp{
 width: 500px;
 height: 520px;
-}
+}}
 /* Nav Bar */
 
  #nav {
