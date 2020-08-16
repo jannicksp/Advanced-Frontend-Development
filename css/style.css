@@ -44,7 +44,7 @@ img {
 }
 .person{
   display: flex;
-  width: 50%;
+  width: 30%;
 }
 
 
@@ -781,6 +781,8 @@ footer p{
   }
   .centerMoreItems {
     display: flex;
+    background-color: #3a7e89;
+    padding: 30px;
 }
 .eventcontainer{
   display: flex;
