@@ -421,17 +421,19 @@ width: 70%;
 color: white;
 margin: 2%;
 display: inline-block;
-
 margin-bottom: 5%;
 
 }
 .textholder h2 {
 font-size: 180%;
-color: black;
+color: white;
 margin: 0% 0 0% 0;
 
-}
 
+}
+.textholder i {
+font-weight: 100;
+}
 .textholder h3 {
 font-size: 150%;
 color: #192d34;
@@ -537,7 +539,6 @@ section-heading h3{
 }
 
 #sendMessageButton{
-  width: 25%;
   background-color: #3a7e89;
   border-color:  #3a7e89;
   border-radius: 5px;
@@ -689,9 +690,14 @@ section-heading h3{
   display: flex;
 }
 /* Footer jannick*/
+@media only screen and (max-width: 600px) {
+footer{
+  flex-wrap: wrap;
+}
+}
 footer {
     background-color: #192d34;
-    display: flex!important;
+    display: flex;
     justify-content: space-around;
     padding: 55px;
     color: white;
