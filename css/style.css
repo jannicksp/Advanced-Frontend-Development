@@ -543,6 +543,7 @@ section-heading h3{
   border-color:  #3a7e89;
   border-radius: 5px;
   color: white;
+  width: 100%;
 }
 .text-center{
   text-align: center;
