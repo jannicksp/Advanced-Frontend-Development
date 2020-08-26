@@ -342,7 +342,6 @@ height: 500px;
 }
 /* About Page */
 .picarticle a:before{
-content: ">";
 display: inline;
 }
 .picarticle a{
@@ -759,7 +758,7 @@ footer p{
     margin: 2% 3% 3% 3%;
   }
   .txt2 {
-  text-align: right;
+  text-align: left;
   }
 
   .textholder h2 {
@@ -971,7 +970,7 @@ table {
 }
 
 @media only screen and (min-width: 768px) {
-  .mobile-burger{ 
+  .mobile-burger{
     display: none;
   }
   .computer-nav{
@@ -991,10 +990,10 @@ table {
 }
 
 @media only screen and (max-width: 767px) {
-  .computer-nav{ 
+  .computer-nav{
     display: none;
   }
- 
+
 }
 
 #nav{
