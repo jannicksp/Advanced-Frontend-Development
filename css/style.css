@@ -342,7 +342,6 @@ height: 500px;
 }
 /* About Page */
 .picarticle a:before{
-content: ">";
 display: inline;
 }
 .picarticle a{
