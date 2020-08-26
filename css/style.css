@@ -977,6 +977,12 @@ table {
     display:flex;
     justify-content: space-between;
     width: 70%;
+    font-size: 20px;
+    
+    
+  }
+  .computer-nav a{
+    text-decoration: none;
   }
   .logo-wrapper{
     width: 30%;
@@ -998,4 +1004,8 @@ table {
 
 #nav{
   background-color: black;
+}
+
+.frontpage-nav{
+  background-color: transparent !important;
 }
