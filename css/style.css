@@ -221,6 +221,7 @@ span{
     justify-content: space-between;
     align-items: center;
     padding: 7%;
+    background-color: #192d35;
 }
 
 
@@ -1020,7 +1021,7 @@ table {
 }
 
 #nav{
-  background-color: black;
+  background-color: #192d35;
 }
 
 .frontpage-nav{
