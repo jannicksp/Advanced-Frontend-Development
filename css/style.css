@@ -326,6 +326,22 @@ width: 100%;
 .sendemail:hover, a:active {
   background-color: #192d34;
 }
+
+
+.sendemail2{
+  background-color: #e9a3ab;
+    color: white;
+  display: flex;
+  text-align:center;
+  padding: 14px 25px;
+  text-decoration: none;
+  display: inline-block;S
+}
+.sendemail2:hover, a:active {
+  background-color: #192d34;
+}
+
+
 }
 canvas {
   border: 1px solid #3a7e89;
@@ -346,8 +362,9 @@ display: inline;
 }
 .picarticle a{
   text-decoration: none;
-  color: #3a7e89;
+  color: #3b7b89;
   font-size:15px;
+  font-weight: bold;
 }
 .picarticle img{
 height: 300px;
@@ -377,6 +394,7 @@ height: 300px;
   margin-top:15px;
   color: black;
 }
+
 
 .aboutover {
 text-align: center;
@@ -888,8 +906,6 @@ width: 50%;
   background-color: #192d34;
 }
 
-
-}
 #demo{
   font-size: 2em;
   border: solid;
