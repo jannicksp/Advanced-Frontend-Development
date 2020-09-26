@@ -182,7 +182,7 @@ background-color: #192d34;
 
 
 #logo{
-    width:15%;
+    width:30%;
 }
 
 span{
@@ -831,6 +831,8 @@ footer p{
   color:white;
 
 }
+
+
 .eventcontainer2{
   display: flex;
   justify-content: flex-start;
@@ -1025,4 +1027,19 @@ table {
 
 .frontpage-nav{
   background-color: transparent !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .textholder {
+    width: 100%;
+}
+}
+.imgholder{
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+  .imgholder img{
+    width: 100%;
+  }
 }
