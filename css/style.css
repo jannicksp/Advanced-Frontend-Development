@@ -19,7 +19,11 @@ html {
 img {
     cursor: pointer;
 }
-
+.cta-flex{
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
 .cta-btn-pink{
   border-radius: 10px;
   background-color: #e9a3ab;
