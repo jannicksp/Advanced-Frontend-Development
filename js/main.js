@@ -168,7 +168,7 @@ function appendDrinks(drinks) {
     <table>
       <tbody>
         <tr>
-            <td>${drink['gsx$nr']['$t']}.</td>
+        
             <td>${drink['gsx$drikke']['$t']}</td>
             <td>${drink['gsx$pris']['$t']}</td>
          
@@ -203,7 +203,7 @@ function appendSjus(drinks) {
     <table>
       <tbody>
         <tr>
-            <td>${drink['gsx$nr']['$t']}.</td>
+          
             <td>${drink['gsx$drikke']['$t']}</td>
             <td>${drink['gsx$pris']['$t']}</td>
         </tr>
@@ -237,7 +237,6 @@ function appendSnack(snacks) {
     <table>
       <tbody>
         <tr>
-            <td>${snack['gsx$nr']['$t']}.</td>
             <td>${snack['gsx$snack']['$t']}</td>
             <td>${snack['gsx$pris']['$t']}</td>
         </tr>

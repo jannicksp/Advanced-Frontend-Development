@@ -10,10 +10,10 @@ html {
     font-size: 10px;
     font-family: 'PT sans narrow', sans-serif;
     overflow-x: hidden;
-    background-image: url(../img/pattern.png) !important;
+    
   }
   body{
-  background-image: url(../img/pattern.png)
+ 
 
   }
 img {
