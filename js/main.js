@@ -73,7 +73,7 @@ function appendMenus(menus) {
   let htmlTemplate = "";
   for (let menu of menus) {
     htmlTemplate += `
-        
+
     <table>
       <tbody>
         <tr>
@@ -168,10 +168,10 @@ function appendDrinks(drinks) {
     <table>
       <tbody>
         <tr>
-        
+
             <td>${drink['gsx$drikke']['$t']}</td>
             <td>${drink['gsx$pris']['$t']}</td>
-         
+
         </tr>
     </tbody>
   </table>
@@ -203,7 +203,7 @@ function appendSjus(drinks) {
     <table>
       <tbody>
         <tr>
-          
+
             <td>${drink['gsx$drikke']['$t']}</td>
             <td>${drink['gsx$pris']['$t']}</td>
         </tr>
@@ -270,7 +270,6 @@ function appendmns(mns) {
     <table>
       <tbody>
         <tr>
-            <td>${mn['gsx$nr']['$t']}.</td>
             <td>${mn['gsx$drikke']['$t']}</td>
             <td>${mn['gsx$beskrivelse']['$t']}</td>
             <td>${mn['gsx$pris']['$t']}</td>

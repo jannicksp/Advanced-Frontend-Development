@@ -47,7 +47,7 @@ background-color: #192d34;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  
+
 }
 
 .cta-btn-pink2:hover{
@@ -623,10 +623,17 @@ section-heading h3{
   text-align: center;
 }
 
-#menus, #menus2, #drinkmenus, #sjusmenus, #snackmenus, #menumenus{
+#menus, #menus2, #menumenus{
+display: block;
+margin: auto;
+      width: 90%;
+    
+}
+
+#drinkmenus, #sjusmenus, #snackmenus{
       width: 33%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 /* Imported Gallery Template - Ian - Originally made by Majed*/
@@ -1006,12 +1013,20 @@ table {
 tr:nth-of-type(odd) {
   background: #eee;
 }
+
 th {
   background: #333;
   color: white;
   font-weight: bold;
 }
+.menuovsk {
+  font-size: 300%;
+}
+td {
+  font-size: 150%;
+}
 td, th {
+
   padding: 6px;
   border: 1px solid #ccc;
   text-align: left;
