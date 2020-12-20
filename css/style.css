@@ -10,10 +10,10 @@ html {
     font-size: 10px;
     font-family: 'PT sans narrow', sans-serif;
     overflow-x: hidden;
-    
+
   }
   body{
- 
+
 
   }
 img {
@@ -32,7 +32,7 @@ img {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 10px 0;
+  margin: 10px 0 50px 0;
 
 }
 
@@ -49,7 +49,7 @@ background-color: #192d34;
   text-decoration: none;
   font-size: 18px;
   color: white;
-  padding-left: 5px;
+
 }
 
 
@@ -608,7 +608,7 @@ section-heading h3{
 }
 
 #menus, #menus2, #drinkmenus, #sjusmenus, #snackmenus, #menumenus{
-      width: 90%;
+      width: 33%;
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -1009,7 +1009,7 @@ table {
   width: 5% ;
 }
 .td2 {
-  width: 15% ;
+  width: 10% ;
 }
 .td3 {
   width: 10% ;
