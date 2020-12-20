@@ -33,10 +33,24 @@ img {
   text-decoration: none;
   display: inline-block;
   margin: 10px 0 50px 0;
-
 }
 
 .cta-btn-pink:hover{
+background-color: #192d34;
+}
+
+.cta-btn-pink2{
+  border-radius: 10px;
+  background-color: #e9a3ab;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  
+}
+
+.cta-btn-pink2:hover{
 background-color: #192d34;
 }
 
