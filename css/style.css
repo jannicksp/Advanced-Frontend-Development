@@ -450,14 +450,12 @@ padding: 1.5%;
 
 .aboutss img {
 width: 100%;
-object-fit: cover;
 object-position: center;
 vertical-align: middle;
 }
 
 .picarticle img {
 width: 100%;
-object-fit: cover;
 object-position: center;
 vertical-align: middle;
 }
