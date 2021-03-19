@@ -519,7 +519,6 @@ font-size: 130%;
 color: white;
 font-family: helvetica;
 font-weight: 400;
-letter-spacing: 1.5px;
 line-height: 160%;
 } 
 
@@ -909,6 +908,10 @@ margin-bottom: 5%;
 line-height: 30px;
 font-size: 20px;
 letter-spacing: 0.4px;
+}
+
+.brodtekst h2{
+  font-weight: 600;
 }
 
 .event{
