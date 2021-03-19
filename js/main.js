@@ -83,7 +83,7 @@ function appendMenus(menus) {
           <td class="td4">${menu['gsx$ølkat']['$t']}</td>
           <td class="td5">${menu['gsx$alk']['$t']}</td>
           <td class="td6">${menu['gsx$beskrivelse']['$t']}</td>
-          <td class="td7">${menu['gsx$pris']['$t']}Kr</td>
+          <td class="td7">${menu['gsx$pris']['$t']} kr</td>
       </tr>
     </tbody>
   </table>
