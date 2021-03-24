@@ -14,7 +14,6 @@
   gallery.querySelectorAll('img').forEach(function (item) {
 
       if (item.complete) {
-          console.log(item.src);
       }
       else {
           item.addEventListener('load', function () {
