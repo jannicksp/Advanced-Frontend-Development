@@ -3,7 +3,7 @@
 // weather api Jannick
 document.addEventListener("DOMContentLoaded", function () {
   // the DOM is fully loaded
- 
+  console.log("Document ready!");
 
   // url: Working APi weather Jannick
 
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return response.json();
     })
     .then(function (json) {
-     
+      console.log(json);
       let current = json.current;
       if (current.temperature < 10) {
         document.querySelector('#current-condition').innerHTML = `
@@ -54,14 +54,14 @@ function closeNav() {
 let sheetId = "1cnnMCXs8Tv9jrciZiQg4lwVNjVCEueYKdZ5JDFzTbxU";
 let sheetNumber = 1;
 let sheetUrl = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber}/public/full?alt=json`;
-
+console.log(sheetUrl);
 
 fetch(sheetUrl)
   .then(function (response) {
     return response.json();
   })
   .then(function (json) {
-  
+    console.log(json);
     appendMenus(json.feed.entry);
   });
 
@@ -69,7 +69,7 @@ fetch(sheetUrl)
 Appends json data to the DOM
 */
 function appendMenus(menus) {
- 
+  console.log(menus);
   let htmlTemplate = "";
   for (let menu of menus) {
     htmlTemplate += `
@@ -115,20 +115,20 @@ window.addEventListener('load', function () {
 /* Fetches the Google Sheet for the About site - Ian */
 let sheetNumber2 = 6;
 let sheetUrl2 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber2}/public/full?alt=json`;
-
+console.log(sheetUrl2);
 
 fetch(sheetUrl2)
   .then(function (response) {
     return response.json();
   })
   .then(function (json) {
-   
+    console.log(json);
     appendArtists(json.feed.entry);
   });
 
 /* This appends the data from the json file, to the DOM - Ian */
 function appendArtists(artists) {
- 
+  console.log(artists);
   let htmlTemplate = "";
   for (let artist of artists) {
     htmlTemplate += `
@@ -144,7 +144,7 @@ function appendArtists(artists) {
 /* Fetches the Google Sheet for the menu Jannick */
 let sheetNumber3 = 2;
 let sheetUrl3 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber3}/public/full?alt=json`;
-
+console.log(sheetUrl3);
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   scrollFunction()
@@ -155,13 +155,13 @@ fetch(sheetUrl3)
     return response.json();
   })
   .then(function (json) {
-    
+    console.log(json);
     appendDrinks(json.feed.entry);
   });
 
 /* This appends the data from the json file, to the DOM - jannick */
 function appendDrinks(drinks) {
-
+  console.log(drinks);
   let htmlTemplate = "";
   for (let drink of drinks) {
     htmlTemplate += `
@@ -183,20 +183,20 @@ function appendDrinks(drinks) {
 /* Fetches the Google Sheet for the menu Jannick */
 let sheetNumber4 = 3;
 let sheetUrl4 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber4}/public/full?alt=json`;
-
+console.log(sheetUrl4);
 
 fetch(sheetUrl4)
   .then(function (response) {
     return response.json();
   })
   .then(function (json) {
-   
+    console.log(json);
     appendSjus(json.feed.entry);
   });
 
 /* This appends the data from the json file, to the DOM - jannick */
 function appendSjus(drinks) {
-
+  console.log(drinks);
   let htmlTemplate = "";
   for (let drink of drinks) {
     htmlTemplate += `
@@ -217,20 +217,20 @@ function appendSjus(drinks) {
 /* Fetches the Google Sheet for the menu Jannick */
 let sheetNumber5 = 4;
 let sheetUrl5 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber5}/public/full?alt=json`;
-
+console.log(sheetUrl5);
 
 fetch(sheetUrl5)
   .then(function (response) {
     return response.json();
   })
   .then(function (json) {
- 
+    console.log(json);
     appendSnack(json.feed.entry);
   });
 
 /* This appends the data from the json file, to the DOM - jannick */
 function appendSnack(snacks) {
-  
+  console.log(snacks);
   let htmlTemplate = "";
   for (let snack of snacks) {
     htmlTemplate += `
@@ -250,20 +250,20 @@ function appendSnack(snacks) {
 /* Fetches the Google Sheet for the menu Jannick */
 let sheetNumber6 = 5;
 let sheetUrl6 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber6}/public/full?alt=json`;
-
+console.log(sheetUrl6);
 
 fetch(sheetUrl6)
   .then(function (response) {
     return response.json();
   })
   .then(function (json) {
-   
+    console.log(json);
     appendmns(json.feed.entry);
   });
 
 /* This appends the data from the json file, to the DOM - jannick */
 function appendmns(mns) {
- 
+  console.log(mns);
   let htmlTemplate = "";
   for (let mn of mns) {
     htmlTemplate += `
@@ -284,20 +284,20 @@ function appendmns(mns) {
 /* Fetches the Google Sheet for the menu Jannick */
 let sheetNumber9 = 8;
 let sheetUrl9 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber9}/public/full?alt=json`;
-
+console.log(sheetUrl9);
 
 fetch(sheetUrl9)
   .then(function (response) {
     return response.json();
   })
   .then(function (json) {
-    
+    console.log(json);
     appendBottle(json.feed.entry);
   });
 
 /* This appends the data from the json file, to the DOM - jannick */
 function appendBottle(bottles) {
-  
+  console.log(bottles);
   let htmlTemplate = "";
   for (let bottle of bottles) {
     htmlTemplate += `
@@ -327,7 +327,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
- 
+  console.log(document.body.scrollTop)
   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
     mybutton.style.display = "block";
   } else {
@@ -346,19 +346,19 @@ function topFunction() {
 
 let sheetNumber8 = 7;
 let sheetUrl8 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber8}/public/full?alt=json`;
-
+console.log(sheetUrl8);
 
 fetch(sheetUrl8)
   .then(function (response) {
     return response.json();
   })
   .then(function (json) {
-    
+    console.log(json);
     appendChart(json.feed.entry);
   });
 
 function appendChart(data) {
-  
+  console.log(data);
 
   // prepare data
   let marks = [];
@@ -385,7 +385,30 @@ function appendChart(data) {
   });
 }
 
+//dato og tid - Burhan
 
+//jeg har gjort så tal under 10 skal tilføje et 0, hvis i er mindre end 10 så tilføjes der et 0.
+function addZero(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
+//addZero er den function som tilføjer 0, når tallet er 1 cifret.
+
+function myFunction() {
+  var d = new Date();
+  var n = JSON.stringify(d.getFullYear());
+  var k = addZero(d.getDate());
+  var b = addZero(d.getMonth() + 1);
+  var t = addZero(d.getHours());
+  var m = addZero(d.getMinutes());
+
+  //jeg kalder på de variabler der skal vises.
+
+  document.getElementById("demo").innerHTML = k + "/" + b + " " + t + ":" + m + "-" + n;
+}
 
 //her kalder vi på functionerne så de aktiveres.
 
