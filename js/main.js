@@ -15,8 +15,9 @@ function closeNav() {
 
 // fetch sheet menu 1 Jannick
 let sheetId = "1cnnMCXs8Tv9jrciZiQg4lwVNjVCEueYKdZ5JDFzTbxU";
+let HanearkId = "1-CDkN7QBE90YS-k4uYBeireauI4aq6cXku1zrYO7bFA";
 let sheetNumber = 1;
-let sheetUrl = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber}/public/full?alt=json`;
+let sheetUrl = `https://spreadsheets.google.com/feeds/list/${HanearkId}/${sheetNumber}/public/full?alt=json`;
 
 fetch(sheetUrl)
   .then(function (response) {
@@ -37,11 +38,11 @@ function appendMenus(menus) {
     <table>
       <tbody>
         <tr>
-          <td class="td1">${menu['gsx$nr']['$t']}.</td>
+          <td class="td1">${menu['gsx$nr.']['$t']}.</td>
           <td class="td2">${menu['gsx$bryggeri']['$t']}</td>
           <td class="td3">${menu['gsx$ølnavn']['$t']}</td>
-          <td class="td4">${menu['gsx$ølkat']['$t']}</td>
-          <td class="td5">${menu['gsx$alk']['$t']}</td>
+          <td class="td4">${menu['gsx$ølkat.']['$t']}</td>
+          <td class="td5">${menu['gsx$alk.']['$t']}</td>
           <td class="td6">${menu['gsx$beskrivelse']['$t']}</td>
           <td class="td7">${menu['gsx$pris']['$t']} kr</td>
       </tr>
