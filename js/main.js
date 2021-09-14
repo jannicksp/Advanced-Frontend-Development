@@ -16,8 +16,9 @@ function closeNav() {
 // fetch sheet menu 1 Jannick
 let sheetId = "1cnnMCXs8Tv9jrciZiQg4lwVNjVCEueYKdZ5JDFzTbxU";
 let HanearkId = "1-CDkN7QBE90YS-k4uYBeireauI4aq6cXku1zrYO7bFA";
-let sheetNumber = 1;
-let sheetUrl = `https://spreadsheets.google.com/feeds/list/${HanearkId}/${sheetNumber}/public/full?alt=json`;
+
+let sheetNumber = "Sheet1";
+let sheetUrl = `https://sheets.googleapis.com/v4/spreadsheets/${HanearkId}/values/${sheetNumber}/?alt=json&key=AIzaSyD-sKBoTcEEGLZdtOdIm_idGvxm3BW33UU`;
 
 fetch(sheetUrl)
   .then(function (response) {
@@ -76,9 +77,9 @@ window.addEventListener('load', function () {
 
 
 /* Fetches the Google Sheet for the menu Jannick */
-let sheetNumber3 = 2;
-let sheetUrl3 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber3}/public/full?alt=json`;
-// When the user scrolls down 20px from the top of the document, show the button
+let sheetNumber3 = "Drikke";
+let sheetUrl3 = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetNumber3}?alt=json&key=AIzaSyD-sKBoTcEEGLZdtOdIm_idGvxm3BW33UU`;
+// When the user scrolls down 20px from the top of the document, show the button public/full?alt=json
 window.onscroll = function () {
   scrollFunction()
 };
@@ -88,32 +89,33 @@ fetch(sheetUrl3)
     return response.json();
   })
   .then(function (json) {
+    console.log(" test", json);
     appendDrinks(json.feed.entry);
   });
 
-/* This appends the data from the json file, to the DOM - jannick */
-function appendDrinks(drinks) {
-  let htmlTemplate = "";
-  for (let drink of drinks) {
-    htmlTemplate += `
-    <table>
-      <tbody>
-        <tr>
-
-            <td>${drink['gsx$drikke']['$t']}</td>
-            <td>${drink['gsx$pris']['$t']}</td>
-
-        </tr>
-    </tbody>
-  </table>
-        `;
+  function appendDrinks(drinks) {
+    let htmlTemplate = "";
+    for (let drink of drinks) {
+      htmlTemplate += `
+      <table>
+        <tbody>
+          <tr>
+  
+              <td>${drink['gsx$drikke']['$t']}</td>
+              <td>${drink['gsx$pris']['$t']}</td>
+  
+          </tr>
+      </tbody>
+    </table>
+          `;
+    }
+    document.querySelector("#drinkmenus").innerHTML += htmlTemplate;
   }
-  document.querySelector("#drinkmenus").innerHTML += htmlTemplate;
-}
+/* This appends the data from the json file, to the DOM - jannick */
 
 /* Fetches the Google Sheet for the menu Jannick */
-let sheetNumber4 = 3;
-let sheetUrl4 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber4}/public/full?alt=json`;
+let sheetNumber4 = "Sjusser";
+let sheetUrl4 = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetNumber4}?alt=json&key=AIzaSyD-sKBoTcEEGLZdtOdIm_idGvxm3BW33UU`;
 
 fetch(sheetUrl4)
   .then(function (response) {
@@ -143,8 +145,8 @@ function appendSjus(drinks) {
 }
 
 /* Fetches the Google Sheet for the menu Jannick */
-let sheetNumber5 = 4;
-let sheetUrl5 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber5}/public/full?alt=json`;
+let sheetNumber5 = "Snacks";
+let sheetUrl5 = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetNumber5}?alt=json&key=AIzaSyD-sKBoTcEEGLZdtOdIm_idGvxm3BW33UU`;
 
 fetch(sheetUrl5)
   .then(function (response) {
@@ -173,8 +175,8 @@ function appendSnack(snacks) {
 }
 
 /* Fetches the Google Sheet for the menu Jannick */
-let sheetNumber6 = 5;
-let sheetUrl6 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber6}/public/full?alt=json`;
+let sheetNumber6 = "Øl-menu";
+let sheetUrl6 = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetNumber6}?alt=json&key=AIzaSyD-sKBoTcEEGLZdtOdIm_idGvxm3BW33UU`;
 
 fetch(sheetUrl6)
   .then(function (response) {
@@ -204,8 +206,8 @@ function appendmns(mns) {
 }
 
 /* Fetches the Google Sheet for the menu Jannick */
-let sheetNumber9 = 8;
-let sheetUrl9 = `https://spreadsheets.google.com/feeds/list/${sheetId}/${sheetNumber9}/public/full?alt=json`;
+let sheetNumber9 = "Øl-flaske";
+let sheetUrl9 = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetNumber9}?alt=json&key=AIzaSyD-sKBoTcEEGLZdtOdIm_idGvxm3BW33UU`;
 
 fetch(sheetUrl9)
   .then(function (response) {
