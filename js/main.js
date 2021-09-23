@@ -25,33 +25,40 @@ fetch(sheetUrl)
     return response.json();
   })
   .then(function (json) {
-    appendMenus(json.feed.entry);
+    appendMenus(json.values, '#menus');
   });
 
 /*
 Appends json data to the DOM
 */
-function appendMenus(menus) {
+function appendMenus(menus, selector) {
   let htmlTemplate = "";
-  for (let menu of menus) {
-    htmlTemplate += `
+  htmlTemplate += `
+  <table>
+  <tbody> 
+  `;
 
-    <table>
-      <tbody>
-        <tr>
-          <td class="td1">${menu['gsx$nr.']['$t']}.</td>
-          <td class="td2">${menu['gsx$bryggeri']['$t']}</td>
-          <td class="td3">${menu['gsx$ølnavn']['$t']}</td>
-          <td class="td4">${menu['gsx$ølkat.']['$t']}</td>
-          <td class="td5">${menu['gsx$alk.']['$t']}</td>
-          <td class="td6">${menu['gsx$beskrivelse']['$t']}</td>
-          <td class="td7">${menu['gsx$pris']['$t']} kr</td>
-      </tr>
-    </tbody>
-  </table>
-      `;
+  for (let [i, row] of menus.entries()) {
+    htmlTemplate += `
+    <tr>
+    `;
+    let tagname = (i == 0) ? 'th' : 'td';
+
+    for (let col of row) {
+      htmlTemplate += `<${tagname} class="td${i+1}">${col}</${tagname}>`;
+    }
+
+    htmlTemplate += `
+    <tr>
+    `;
   }
-  document.querySelector("#menus").innerHTML += htmlTemplate;
+
+  htmlTemplate += `
+  </tbody> 
+  </table>
+  `;
+
+  document.querySelector(selector).innerHTML += htmlTemplate;
 }
 
 
@@ -89,28 +96,40 @@ fetch(sheetUrl3)
     return response.json();
   })
   .then(function (json) {
-    console.log(" test", json);
-    appendDrinks(json.feed.entry);
+    appendDrinks(json.values, '#drinkmenus');
   });
 
-  function appendDrinks(drinks) {
-    let htmlTemplate = "";
-    for (let drink of drinks) {
-      htmlTemplate += `
-      <table>
-        <tbody>
-          <tr>
-  
-              <td>${drink['gsx$drikke']['$t']}</td>
-              <td>${drink['gsx$pris']['$t']}</td>
-  
-          </tr>
-      </tbody>
-    </table>
-          `;
+function appendDrinks(menus, selector) {
+  let htmlTemplate = "";
+  htmlTemplate += `
+  <table>
+  <tbody> 
+  `;
+
+  for (let [i, row] of menus.entries()) {
+    htmlTemplate += `
+    <tr>
+    `;
+    let tagname = (i == 0) ? 'th' : 'td';
+
+    for (let col of row) {
+      htmlTemplate += `<${tagname} class="td${i+1}">${col}</${tagname}>`;
     }
-    document.querySelector("#drinkmenus").innerHTML += htmlTemplate;
+
+    htmlTemplate += `
+    <tr>
+    `;
   }
+
+  htmlTemplate += `
+  </tbody> 
+  </table>
+  `;
+
+  document.querySelector(selector).innerHTML += htmlTemplate;
+}
+
+
 /* This appends the data from the json file, to the DOM - jannick */
 
 /* Fetches the Google Sheet for the menu Jannick */
@@ -122,26 +141,38 @@ fetch(sheetUrl4)
     return response.json();
   })
   .then(function (json) {
-    appendSjus(json.feed.entry);
+    appendDrinks(json.values, '#sjusmenus');
   });
 
 /* This appends the data from the json file, to the DOM - jannick */
-function appendSjus(drinks) {
+function appendSjus(menus, selector) {
   let htmlTemplate = "";
-  for (let drink of drinks) {
-    htmlTemplate += `
-    <table>
-      <tbody>
-        <tr>
+  htmlTemplate += `
+  <table>
+  <tbody> 
+  `;
 
-            <td>${drink['gsx$drikke']['$t']}</td>
-            <td>${drink['gsx$pris']['$t']}</td>
-        </tr>
-      </tbody>
-    </table>
-        `;
+  for (let [i, row] of menus.entries()) {
+    htmlTemplate += `
+    <tr>
+    `;
+    let tagname = (i == 0) ? 'th' : 'td';
+
+    for (let col of row) {
+      htmlTemplate += `<${tagname} class="td${i+1}">${col}</${tagname}>`;
+    }
+
+    htmlTemplate += `
+    <tr>
+    `;
   }
-  document.querySelector("#sjusmenus").innerHTML += htmlTemplate;
+
+  htmlTemplate += `
+  </tbody> 
+  </table>
+  `;
+
+  document.querySelector(selector).innerHTML += htmlTemplate;
 }
 
 /* Fetches the Google Sheet for the menu Jannick */
@@ -153,37 +184,53 @@ fetch(sheetUrl5)
     return response.json();
   })
   .then(function (json) {
-    appendSnack(json.feed.entry);
+    appendDrinks(json.values, '#snackmenus');
   });
 
 /* This appends the data from the json file, to the DOM - jannick */
-function appendSnack(snacks) {
+function appendSjus(menus, selector) {
   let htmlTemplate = "";
-  for (let snack of snacks) {
+  htmlTemplate += `
+  <table>
+  <tbody> 
+  `;
+
+  for (let [i, row] of menus.entries()) {
     htmlTemplate += `
-    <table>
-      <tbody>
-        <tr>
-            <td>${snack['gsx$snack']['$t']}</td>
-            <td>${snack['gsx$pris']['$t']}</td>
-        </tr>
-      </tbody>
-    </table>
-        `;
+    <tr>
+    `;
+    let tagname = (i == 0) ? 'th' : 'td';
+
+    for (let col of row) {
+      htmlTemplate += `<${tagname} class="td${i+1}">${col}</${tagname}>`;
+    }
+
+    htmlTemplate += `
+    <tr>
+    `;
   }
-  document.querySelector("#snackmenus").innerHTML += htmlTemplate;
+
+  htmlTemplate += `
+  </tbody> 
+  </table>
+  `;
+
+  document.querySelector(selector).innerHTML += htmlTemplate;
 }
 
 /* Fetches the Google Sheet for the menu Jannick */
 let sheetNumber6 = "Øl-menu";
 let sheetUrl6 = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetNumber6}?alt=json&key=AIzaSyD-sKBoTcEEGLZdtOdIm_idGvxm3BW33UU`;
 
+
+
+
 fetch(sheetUrl6)
   .then(function (response) {
     return response.json();
   })
   .then(function (json) {
-    appendmns(json.feed.entry);
+    appendMenus(json.values, '#menumenus');
   });
 
 /* This appends the data from the json file, to the DOM - jannick */
@@ -192,15 +239,15 @@ function appendmns(mns) {
   for (let mn of mns) {
     htmlTemplate += `
     <table>
-      <tbody>
-        <tr>
-            <td>${mn['gsx$drikke']['$t']}</td>
-            <td>${mn['gsx$beskrivelse']['$t']}</td>
-            <td>${mn['gsx$pris']['$t']}</td>
-        </tr>
-      </tbody>
+    <tbody>
+    <tr>
+    <td>${mn['gsx$drikke']['$t']}</td>
+    <td>${mn['gsx$beskrivelse']['$t']}</td>
+    <td>${mn['gsx$pris']['$t']}</td>
+    </tr>
+    </tbody>
     </table>
-        `;
+    `;
   }
   document.querySelector("#menumenus").innerHTML += htmlTemplate;
 }
@@ -222,18 +269,18 @@ function appendBottle(bottles) {
   let htmlTemplate = "";
   for (let bottle of bottles) {
     htmlTemplate += `
-      <table>
-      <tbody>
-      <tr>
-        <td class="td1">${bottle['gsx$nr']['$t']}.</td>
-        <td class="td2">${bottle['gsx$bryggeri']['$t']}</td>
-        <td class="td3">${bottle['gsx$ølnavn']['$t']}</td>
-        <td class="td4">${bottle['gsx$ølkat']['$t']} </td>
-        <td class="td5">${bottle['gsx$alk']['$t']} </td>
-        <td class="td7">${bottle['gsx$pris']['$t']}Kr</td>
-              </tr>
-              </tbody>
-              </table>
+    <table>
+    <tbody>
+    <tr>
+    <td class="td1">${bottle['gsx$nr']['$t']}.</td>
+    <td class="td2">${bottle['gsx$bryggeri']['$t']}</td>
+    <td class="td3">${bottle['gsx$ølnavn']['$t']}</td>
+    <td class="td4">${bottle['gsx$ølkat']['$t']} </td>
+    <td class="td5">${bottle['gsx$alk']['$t']} </td>
+    <td class="td7">${bottle['gsx$pris']['$t']}Kr</td>
+    </tr>
+    </tbody>
+    </table>
     `;
   }
   document.querySelector("#menus2").innerHTML += htmlTemplate;
@@ -260,4 +307,3 @@ function topFunction() {
   document.body.scrollTop = 0; //
   document.documentElement.scrollTop = 0; //
 }
-
