@@ -218,6 +218,48 @@ function appendSjus(menus, selector) {
   document.querySelector(selector).innerHTML += htmlTemplate;
 }
 
+
+//dsd
+let sheetNumberOpen = "abningstider";
+let sheetUrlOpen = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetNumberOpen}?alt=json&key=AIzaSyD-sKBoTcEEGLZdtOdIm_idGvxm3BW33UU`;
+
+fetch(sheetUrlOpen)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (json) {
+    appendHours(json.values, '#opening-hours');
+  });
+
+/* This appends the data from the json file, to the DOM - jannick */
+function appendHours(menus, selector) {
+  let htmlTemplate = "";
+  htmlTemplate += `
+  `;
+
+  for (let [i, row] of menus.entries()) {
+    htmlTemplate += `
+    <li>
+    `;
+    let tagname = (i == 0) ? 'th' : 'td';
+
+    for (let col of row) {
+      htmlTemplate += `<${tagname} class="td${i+1}">${col}</${tagname}>`;
+    }
+
+    htmlTemplate += `
+    <li>
+    `;
+  }
+
+  htmlTemplate += `
+  `;
+
+  document.querySelector(selector).innerHTML += htmlTemplate;
+}
+
+//sdsd
+
 /* Fetches the Google Sheet for the menu Jannick */
 let sheetNumber6 = "Øl-menu";
 let sheetUrl6 = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetNumber6}?alt=json&key=AIzaSyD-sKBoTcEEGLZdtOdIm_idGvxm3BW33UU`;
